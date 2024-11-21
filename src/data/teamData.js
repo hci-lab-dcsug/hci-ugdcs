@@ -16,7 +16,7 @@ const teamData = {
     codirector: {
     name: "Jamal-Deen Abdulai",
     title: "Professor & Lab Director",
-    image: "/prof.jpg",
+    image: "/prof_jamal.jpg",
     description: [
         "- Computer Networking",
         "- Wireless Communication Systems",
@@ -30,55 +30,55 @@ const teamData = {
     {
       name: "Justice Appati",
       title: "PhD",
-      image: "/images/akon.jpg",
+      image: "/appati.jpeg",
       expertise:
         "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
     },
     {
       name: "Akon Ekpezu",
       title: "PhD Student",
-      image: "/images/akon.jpg",
+      image: "/akon.jpg",
       expertise:
         "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
     },
     {
       name: "Mark Atta Mensah",
       title: "PhD",
-      image: "/images/akon.jpg",
+      image: "/mark.jpeg",
       expertise:
         "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
     },
     {
       name: "Elikem Doe Atsapo",
       title: "MPhil Student",
-      image: "/images/elikem.jpg",
+      image: "/elikem.jpeg",
       expertise: "Computer Vision, Virtual Reality, Simulation.",
     },
     {
       name: "Sumaya Salihs Ahmed",
       title: "MSc Student",
-      image: "/images/sumay.jpg",
+      image: "/sumaya.jpeg",
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Akosua Nyarkoa Akenteng-Wiafe",
       title: "MSc Student",
-      image: "/images/akosua.jpg",
+      image: "/akosua.jpeg",
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Evans Kwasi",
       title: "MSc Student",
-      image: "/images/evans.jpg",
+      image: "/evans.jpeg",
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Fiifi Baffoe Payin Winful",
       title: "Teaching/Research Assistant",
-      image: "/images/payin.jpg",
+      image: "/payin.jpeg",
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },

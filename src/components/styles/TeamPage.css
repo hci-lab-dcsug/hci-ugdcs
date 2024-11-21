@@ -14,7 +14,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
-    /* Center-align cards horizontally */
 }
 
 .director-card {
@@ -27,16 +26,20 @@
     max-width: 300px;
     width: 100%;
     height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Uniform image size for directors */
 .director-image {
-    width: 200px;
-    height: auto;
-    max-height: 250px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
 
+/* Director Info */
 .director-card h3 {
     font-size: 1.5rem;
     margin: 10px 0;
@@ -94,7 +97,7 @@
 
 .team-card-image {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -114,4 +117,5 @@
 .team-card-expertise {
     font-size: 0.9rem;
     color: #555;
+    text-align: left;
 }
