@@ -34,7 +34,7 @@
 /* Uniform image size for directors */
 .director-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -112,6 +112,7 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .team-card-expertise {
