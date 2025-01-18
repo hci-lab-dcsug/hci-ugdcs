@@ -11,9 +11,9 @@
     margin: auto; /* Center the block itself horizontally */
 }
 
-contact-header h2 {
-    font-size: 2rem;
-    color: #021427;
+.admission-info p {
+    font-size: 1rem;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -107,16 +107,9 @@ address {
     max-width: 800px;
 }
 
-.join-us-page h2 {
-    text-align: left; /* Align headings to the left */
-    font-size: 1.5rem;
-    color: #021427;
-    margin-bottom: 15px;
-}
-
 section p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
     line-height: 1.6;
 }
 

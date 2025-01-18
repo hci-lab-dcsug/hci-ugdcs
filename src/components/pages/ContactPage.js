@@ -52,7 +52,7 @@ function ContactPage() {
       
       {/* Contact Section */}
       <div className="contact-header">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <p>
           Our facilities are located at the Department of Computer Science Building, in the main campus of University of Ghana.
         </p>
