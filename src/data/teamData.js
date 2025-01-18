@@ -29,13 +29,6 @@ const teamData = {
 
   team: [
     {
-      name: "Justice Appati",
-      title: "PhD",
-      image: "/appati.jpeg",
-      expertise:
-        "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
-    },
-    {
       name: "Akon Ekpezu",
       title: "PhD Student",
       image: "/akon.jpg",

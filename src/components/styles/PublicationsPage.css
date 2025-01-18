@@ -1,0 +1,31 @@
+.publications-container {
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #333; 
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.publications-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: decimal inside;
+  max-width: 800px;
+}
+
+.publication-item {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.publication-item strong {
+  font-weight: bold;
+}

@@ -14,7 +14,7 @@ function HomePage() {
         real-world problems using cutting-edge technologies.
       </p>
 
-      <img src="/lab_image.png" alt="HCI Lab" className="lab-image" />
+      <img src="/lab.jpg" alt="HCI Lab" className="lab-image" />
       <h2 className="research-focus">Our Research Interests</h2>
       <div className="research-grid">
         {researchFocus.map((focus, index) => (

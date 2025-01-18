@@ -1,8 +1,8 @@
 import React from "react";
-import eventsData from "../../data/eventsData"; 
+import eventsData from "../../data/eventsData";
 import "../styles/EventsPage.css";
 import EventCard from "../EventsCard";
-import "../styles/EventsCard.css"
+import "../styles/EventsCard.css";
 
 function EventsPage() {
   return (
@@ -22,24 +22,8 @@ function EventsPage() {
       <div className="events-content">
         <div className="events-list">
           {eventsData.map((event) => (
-              <EventCard key={event.id} event={event}/>   
+            <EventCard key={event.id} event={event} />
           ))}
-        </div>
-
-        <div className="calendar">
-          <h3>January 2025</h3>
-          <div className="calendar-grid">
-            {Array.from({ length: 31 }, (_, i) => (
-              <div
-                key={i}
-                className={`calendar-day ${
-                  i === new Date().getDate() - 1 ? "active-day" : ""
-                }`}
-              >
-                {i + 1}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

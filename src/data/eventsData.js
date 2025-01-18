@@ -30,6 +30,7 @@ const eventsData = [
       { sponsor: "GDI Hub, University College of London" },
       { image: "/gdi_hub.png" },
     ],
+    url:"https://hci-lab-ugspeechdata.github.io/hack-tekyeremapa/"
   },
  
 ];
