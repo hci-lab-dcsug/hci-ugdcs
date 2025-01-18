@@ -19,7 +19,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/hci-ugdcs">
       <div className="app-container">
         <Navbar />
         <main>
