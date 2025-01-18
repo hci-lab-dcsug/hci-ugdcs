@@ -42,14 +42,18 @@ function Navbar() {
           <Link to="/publications">Publications</Link>
         </li>
         <li>
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li>
           <Link to="/events-info"> Events</Link>
+        </li>
+        <li>
+          <Link to="/software">Software</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li>
-          <Link to="/join-us">Join Us</Link>
-        </li>
+
       </ul>
     </nav>
   );

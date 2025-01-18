@@ -1,6 +1,6 @@
 {
   "homepage": "https://hci-lab-dcsug.github.io",
-  "name": "hackathon-website",
+  "name": "hci-lab-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

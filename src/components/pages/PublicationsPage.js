@@ -1,4 +1,3 @@
-// PublicationsPage.jsx
 import React, { useMemo } from 'react';
 import '../styles/PublicationsPage.css';
 import publicationsData from '../../data/publicationsData';
@@ -22,51 +21,61 @@ const PublicationsPage = () => {
     return highlightedCitation;
   };
 
-  // Memoize the highlighted citations for performance optimization
-  const highlightedJournals = useMemo(
-    () =>
-      journals.map((journal) => ({
+  // Filter and group journals by year, starting from 2018
+  const journalsByYear = useMemo(() => {
+    // Filter journals from 2018 onwards
+    const filteredJournals = journals.filter((journal) => {
+      const publicationYear = new Date(journal.year).getFullYear();
+      return publicationYear >= 2017;
+    });
+
+    // Group filtered journals by year
+    return filteredJournals.reduce((acc, journal) => {
+      const publicationYear = new Date(journal.year).getFullYear();
+      if (!acc[publicationYear]) {
+        acc[publicationYear] = [];
+      }
+      acc[publicationYear].push({
         ...journal,
         highlightedCitation: highlightAuthors(journal.citation),
-      })),
-    [journals]
-  );
-
-  const highlightedConferences = useMemo(
-    () =>
-      conferences.map((conf) => ({
-        ...conf,
-        highlightedCitation: highlightAuthors(conf.citation),
-      })),
-    [conferences]
-  );
+      });
+      return acc;
+    }, {});
+  }, [journals]);
 
   return (
     <div style={{ padding: '20px' }}>
       <h1>Publications</h1>
       <section>
         <h2>Journals</h2>
-        <ul>
-          {highlightedJournals.map((journal, index) => (
-            <li key={index}>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: journal.highlightedCitation,
-                }}
-              />
-            </li>
+        {Object.keys(journalsByYear)
+          .sort((a, b) => b - a) // Sort years in descending order
+          .map((year) => (
+            <div key={year}>
+              <h3>{year}</h3>
+              <ul>
+                {journalsByYear[year].map((journal, index) => (
+                  <li key={index}>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: journal.highlightedCitation,
+                      }}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
       </section>
 
       <section>
         <h2>Conferences</h2>
         <ul>
-          {highlightedConferences.map((conf, index) => (
+          {conferences.map((conf, index) => (
             <li key={index}>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: conf.highlightedCitation,
+                  __html: highlightAuthors(conf.citation),
                 }}
               />
             </li>
