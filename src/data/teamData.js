@@ -2,7 +2,7 @@ const teamData = {
   director: {
     name: "Isaac Wiafe",
     title: "Professor & Lab Director",
-    image: "/prof.jpg",
+    image: `${process.env.PUBLIC_URL}/prof.jpg`,
     description: [
       "- Professor of Computer Science",
       "- Persuasive Design & Technology",
@@ -16,7 +16,7 @@ const teamData = {
   codirector: {
     name: "Jamal-Deen Abdulai",
     title: "Professor & Lab Director",
-    image: "/prof_jamal.jpg",
+    image: `${process.env.PUBLIC_URL}/prof_jamal.jpg`,
     description: [
       "- Computer Networking",
       "- Wireless Communication Systems",
@@ -31,48 +31,48 @@ const teamData = {
     {
       name: "Akon Ekpezu",
       title: "PhD Student",
-      image: "/akon.jpg",
+      image: `${process.env.PUBLIC_URL}/akon.jpg`,
       expertise:
         "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
     },
     {
       name: "Mark Atta Mensah",
       title: "PhD",
-      image: "/mark.jpeg",
+      image: `${process.env.PUBLIC_URL}/mark.jpeg`,
       expertise:
         "Artificial Intelligence, Pervasive Technologies, Natural Language Processing",
     },
     {
       name: "Elikem Doe Atsapo",
       title: "MPhil Student",
-      image: "/elikem.jpeg",
+      image: `${process.env.PUBLIC_URL}/elikem.jpeg`,
       expertise: "Computer Vision, Virtual Reality, Simulation.",
     },
     {
       name: "Sumaya Salihs Ahmed",
       title: "MSc Student",
-      image: "/sumaya.jpeg",
+      image: `${process.env.PUBLIC_URL}/sumaya.jpeg`,
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Akosua Nyarkoa Wiafe-Akenteng",
       title: "MSc Student",
-      image: "/akosua.jpeg",
+      image: `${process.env.PUBLIC_URL}/akosua.jpeg`,
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Evans Kwasi",
       title: "MSc Student",
-      image: "/evans.jpeg",
+      image: `${process.env.PUBLIC_URL}/evans.jpeg`,
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },
     {
       name: "Fiifi Baffoe Payin Winful",
       title: "Teaching/Research Assistant",
-      image: "/payin.jpeg",
+      image: `${process.env.PUBLIC_URL}/payin.jpeg`,
       expertise:
         "Computer Vision, Automatic Speech Recognition, Natural Language Processing.",
     },

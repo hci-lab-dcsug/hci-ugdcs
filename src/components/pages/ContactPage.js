@@ -86,7 +86,7 @@ function ContactPage() {
       <div className="contact-image">
         <div className="contact-image-card">
           <img
-            src="/Dept.jpg"
+            src={`${process.env.PUBLIC_URL}/Dept.jpg`}
             alt="University of Ghana, Main Campus"
             className="contact-image"
           />

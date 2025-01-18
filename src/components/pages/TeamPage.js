@@ -2,6 +2,7 @@ import React from "react";
 import TeamCard from "../TeamCard";
 import "../styles/TeamPage.css";
 import teamData from "../../data/teamData";
+import { Link } from "react-router-dom"; // For navigation if using routes
 
 function TeamPage() {
   const { team, director, codirector } = teamData;
@@ -21,10 +22,13 @@ function TeamPage() {
             <h3>{director.name}</h3>
             <h4>{director.title}</h4>
             <ul>
-              {director.description.map((item, index) => (
+              {director.description.slice(0, 3).map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
+            <Link to={`/directors/${director.id}`} className="read-more-link">
+              Read More
+            </Link>
           </div>
 
           {/* Co-Director Card */}
@@ -37,10 +41,13 @@ function TeamPage() {
             <h3>{codirector.name}</h3>
             <h4>{codirector.title}</h4>
             <ul>
-              {codirector.description.map((item, index) => (
+              {codirector.description.slice(0, 3).map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
+            <Link to={`/directors/${codirector.id}`} className="read-more-link">
+              Read More
+            </Link>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ function Navbar() {
       {!isHomepage && (
         <div className="navbar-branding">
           <Link to="/" className="logo-link">
-            <img src="/hci.png" alt="Lab Logo" className="navbar-logo" />
+            <img src={`${process.env.PUBLIC_URL}/hci.png`} alt="Lab Logo" className="navbar-logo" />
             <p className="lab-name">HCI & Persuasive Technologies Laboratory</p>
           </Link>
           <div className="ug">
@@ -26,7 +26,7 @@ function Navbar() {
       {isHomepage && (
         <div className="logo-container">
           <Link to="/" className="logo-link">
-            <img src="/hci.png" alt="HCI Lab Logo" className="navbar-logo" />
+            <img src={`${process.env.PUBLIC_URL}/hci.png`} alt="HCI Lab Logo" className="navbar-logo" />
             <p className="lab-name">HCI & Persuasive Technologies Lab</p>
           </Link>
         </div>

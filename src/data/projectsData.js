@@ -7,7 +7,8 @@ const projectsData = [
          this initiative seeks to break down language barriers by supporting low-resource languages such as Twi, Fante, Dagbani, Baoule, Ga, Ikposo, and Dagaare. \
          The overarching goal of the project is to make healthcare more accessible to communities that often lack adequate resources and infrastructure. \
          By addressing critical maternal care needs and providing an easily accessible, multilingual platform, this initiative empowers women and families in underserved areas. It strives to reduce disparities in maternal health outcomes and ensure that essential care reaches even the most remote regions. Ultimately, this project aims to promote inclusivity and equity in healthcare by expanding its reach to diverse linguistic and cultural groups.",
-    image: "maternal-healthcare.jpg",
+    image: `${process.env.PUBLIC_URL}/maternal-healthcare.jpg`,
+    status:"current"
   },
   {
     title: "Automatic Speech Recognition for Non-Standard Akan Speech",
@@ -20,7 +21,9 @@ const projectsData = [
         opening up opportunities for education, healthcare, and other essential services. Through this project, the team aspires to empower speakers of Akan and similar low-resource languages by providing them with tools \
         that respect and preserve their linguistic identities while reducing communication barriers. By focusing on technological inclusivity, \
         this initiative seeks to create a more equitable digital future for underserved communities.",
-    image: "/cerebral-palsy.png",
+    image: `${process.env.PUBLIC_URL}/cerebral-palsy.png`,
+    status:"current"
+
   },
 ];
 
