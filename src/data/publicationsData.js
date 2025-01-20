@@ -2,191 +2,302 @@ const publicationsData = {
 
 "journals": [
     {
-        "citation": "Wiafe, I., Ekpezu, A. O., Gyamera, G. O., Winful, F. B. P., Atsakpo, E. D., Nutropkor, C., & Gulliver, S. (2025). Comparative evaluation of learning technologies using a randomized controlled trial: Virtual reality, augmented reality, online video platforms, and traditional classroom learning. Education and Information Technologies. (In press).",
+        "citation": "Wiafe, I., Ekpezu, A. O., Gyamera, G. O., Winful, F. B. P., Atsakpo, E. D., Nutrokpor, C., & Gulliver, S. R. (2025). Comparative evaluation of learning technologies using a randomized controlled trial: Virtual reality, augmented reality, online video platforms, and traditional classroom learning. Education and Information Technologies.",
         "year":"2025",
-        "status": "In press"
+        "status": ""
       },
       {
-        "citation": "Wiafe, I., Ekpezu, A. O., Gyamera, G. O., Winful, F. B. P., Atsakpo, E. D., Nutrokpor, C., & Gulliver, S. R. (2024). Learning satisfaction in virtual reality: The role of persuasive design. International Journal of Human-Computer Interaction. (In press).",
+        "citation": "Wiafe, I., Ekpezu, A. O., Gyamera, G. O., Winful, F. B. P., Atsakpo, E. D., Nutrokpor, C., & Gulliver, S. R. (2024). Learning satisfaction in virtual reality: The role of persuasive design. International Journal of Human-Computer Interaction.",
         "year":"2024",
-        "status": "In press"
+        "status": ""
       },
+      
       {
-        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2024). Persuasive software features as antecedents to perceived compliance within physical activity behavior change support systems. Behaviour and Information Technology. (In press).",
+        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2024). Persuasive software features as antecedents to perceived compliance within physical activity behavior change support systems. Behaviour & Information Technology.",
         "year":"2024",
-        "status": "In press"
+        "status": ""
       },
+
       {
-        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2023). Enhancing perceived health competence: The impact of persuasive social support features in health and fitness apps. International Journal of Human-Computer Interaction. (In press).",
+        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2023). Predicting adherence to behavior change support systems using machine learning: Systematic review. Journal of Medical Internet Research - Artificial Intelligence.",
         "year":"2023",
-        "status": "In press"
+        "status": ""
       },
+
       {
-        "citation": "Koranteng, F. N., Wiafe, I., Katsriku, F. A., & Apau, R. (2023). Understanding trust on social networking sites among tertiary students: An empirical study in Ghana. Applied Computing and Informatics, 19(3–4), 209–225. https://doi.org/10.1108/ACI-12-2020-0131",
+        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2023). Enhancing perceived health competence: The impact of persuasive social support features in health and fitness apps. International Journal of Human-Computer Interaction",
         "year":"2023",       
         "status": ""
       },
+
       {
-        "citation": "Wiafe, I., Koranteng, F. N., Kastriku, F. A., & Gyamera, G. O. (2022). Assessing the impact of persuasive features on user’s intention to continuous use: The case of academic social networking sites. Behaviour and Information Technology, 41(4), 712–730. https://doi.org/10.1080/0144929X.2020.1832146",
-        "year":"2022",
-        "status": ""
-      },
-      {
-        "citation": "Armah, Z. A., Wiafe, I., Koranteng, F. N., & Owusu, E. (2022). Speed monitoring and controlling systems for road vehicle safety: A systematic review. Advances in Transportation Studies, 56, 3–22. https://doi.org/10.4399/97888255202082",
-        "year":"2022",
-        "status": ""
-      },
-      {
-        "citation": "Koranteng, F. N., Ham, J., Wiafe, I., & Matzat, U. (2022). The role of usability, aesthetics, usefulness, and primary task support in predicting the perceived credibility of academic social networking sites. Behaviour and Information Technology, 41(16), 3617–3632. https://doi.org/10.1080/0144929X.2021.1954541",
+        "citation": "Wiafe, A., Nutrokpor, C., Owusu, E., Kastriku, F. A., & Wiafe, I. (2022). Using genetic algorithms for music composition: Implications of early termination on aesthetic quality. International Journal of Information Technology",
         "year":"2022",
         "status": ""
       },
 
       {
-        "citation": "Ekpezu, A. O., Wiafe, I., Katsriku, F., & Yaokumah, W. (2021). Using deep learning for acoustic event classification: The case of natural disasters. Journal of the Acoustical Society of America, 149(4), 2926–2935. https://doi.org/10.1121/10.0004567",
-        "year":"2021",
-        "status": ""
-      },
-
-      {
-        "citation": "Koranteng, F. N., Wiafe, I., Katsriku, F. A., & Apau, R. (2023). Understanding trust on social networking sites among tertiary students: An empirical study in Ghana. Applied Computing and Informatics, 19(3–4), 209–225. https://doi.org/10.1108/ACI-05-2021-0112",
-        "year":"2023",
-        "status": ""
-      },
-
-      {
-        "citation": "Adu-Manu, K. S., Tapparello, C., Heinzelman, W., Katsriku, F. A., & Abdulai, J.-D. (2017). Water quality monitoring using wireless sensor networks: Current trends and future research directions. *ACM Transactions on Sensor Networks (TOSN)*, 13(1), 1–41.",
-        "year":"2017",
+        "citation": "Armah, Z. A., Wiafe, I., Koranteng, F. N., & Owusu, E. (2022). Speed monitoring and controlling systems for road vehicle safety: A systematic review. Advances in Transportation Studies.",
+        "year": "2022",
         "status": ""
       },
       {
-        "citation": "Engmann, F., Katsriku, F. A., Abdulai, J.-D., Adu-Manu, K. S., & Banaseka, F. K. (2018). Prolonging the lifetime of wireless sensor networks: A review of current techniques. *Wireless Communications and Mobile Computing*, 2018, Article 8035065.",
-        "year":"2018",
+        "citation": "Wiafe, I., Koranteng, F. N., Kastriku, F. A., & Gyamera, G. O. (2022). Assessing the impact of persuasive features on user’s intention to continuous use: The case of academic social networking sites. Behaviour & Information Technology.",
+        "year": "2022",
         "status": ""
       },
       {
-        "citation": "Gyamfi, N. K., & Abdulai, J.-D. (2018). Bank fraud detection using support vector machine. In *Proceedings of the IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)* (pp. 415–421).",
-        "year":"2018",
+        "citation": "Ekpezu, A. O., Katsriku, F., Yaokumah, W., & Wiafe, I. (2022). The use of machine learning algorithms in the classification of sound: A systematic review. International Journal of Service Science, Management, Engineering, and Technology.",
+        "year": "2022",
         "status": ""
       },
       {
-        "citation": "Abdulai, J.-D., Ould-Khaoua, M., Mackenzie, L. M., & Mohammed, A. (2008). Neighbour coverage: A dynamic probabilistic route discovery for mobile ad hoc networks. In *Proceedings of the 2008 International Symposium on Performance Evaluation of Computer and Telecommunication Systems* (pp. 165–172).",
-        "year":"2008",
+        "citation": "Koranteng, F. N., Ham, J., Wiafe, I., & Matzat, U. (2022). The role of usability, aesthetics, usefulness and primary task support in predicting the perceived credibility of academic social networking sites. Behaviour & Information Technology.",
+        "year": "2022",
         "status": ""
       },
       {
-        "citation": "Abdulai, J.-D., Ould-Khaoua, M., & Mackenzie, L. M. (2007). Improving probabilistic route discovery in mobile ad hoc networks. In *Proceedings of the 32nd IEEE Conference on Local Computer Networks (LCN 2007)* (pp. 739–746).",
-        "year":"2007",
-        "status": ""
-      },{
-    
-        "citation": "Adu-Manu, K. S., Abdulai, J.-D., Engmann, F., Akazue, M., Appati, J. K., Baiden, G. E., & Sarfo-Kantanka, G. (2022). WSN architectures for environmental monitoring applications. *Journal of Sensors*, 2022, Article 7823481.",
-        "year":"2022",
+        "citation": "Ekpezu, A. O., Wiafe, I., Katsriku, F., & Yaokumah, W. (2021). Using deep learning for acoustic event classification: The case of natural disasters. The Journal of the Acoustical Society of America.",
+        "year": "2021",
         "status": ""
       },
       {
-        "citation": "Abdulai, J.-D., Amengu, A. A., Katsriku, F. A., & Adu-Manu, K. S. (2024). CBU-SMAC: An energy-efficient cluster-based unified SMAC algorithm for wireless sensor networks. *Journal of Ambient Intelligence and Humanized Computing*. https://doi.org/10.1007/s12652-023-04737-z",
-        "year":"2024",
-        "status": "Accepted/In press"
-      },
-
-      {
-        "citation": "Koranteng, F. N., Ham, J., Wiafe, I., & Matzat, U. (2022). The role of usability, aesthetics, usefulness, and primary task support in predicting the perceived credibility of academic social networking sites. Behaviour and Information Technology, 41(16), 3617–3632. https://doi.org/10.1080/0144929X.2021.2004811",
-        "year":"2022",
+        "citation": "Owusu, E., & Wiafe, I. (2021). An advanced ensemble classification for object recognition. Neural Computing and Applications.",
+        "year": "2021",
         "status": ""
       },
       {
-        "citation": "Wiafe, A., Nutrokpor, C., Owusu, E., Katsriku, F. A., & Wiafe, I. (2022). Using genetic algorithms for music composition: Implications of early termination on aesthetic quality. International Journal of Information Technology, 14(4), 1875–1881. https://doi.org/10.1007/s41870-022-00914-1",
-        "year":"2022",
+        "citation": "Wiafe, I., Koranteng, F. N., Owusu, E., & Alimo, S. (2021). Factors that influence user perception of ubiquitous monitoring environments: An empirical study in a developing country. Journal of Ambient Intelligence and Smart Environments.",
+        "year": "2021",
         "status": ""
       },
       {
-        "citation": "Owusu, E., & Wiafe, I. (2021). An advance ensemble classification for object recognition. Neural Computing and Applications, 33(18), 11661–11672. https://doi.org/10.1007/s00521-021-05785-1",
-        "year":"2021",
+        "citation": "Banaseka, F. K., Franklin, H., Katsriku, F. A., Abdulai, J.-D., Ekpezu, A., & Wiafe, I. (2021). Soil medium electromagnetic scattering model for the study of wireless underground sensor networks. Wireless Communications and Mobile Computing.",
+        "year": "2021",
         "status": ""
       },
       {
-        "citation": "Wiafe, I., Koranteng, F. N., Owusu, E., & Alimo, S. (2021). Factors that influence user perception of ubiquitous monitoring environments: An empirical study in a developing country. Journal of Ambient Intelligence and Smart Environments, 13(2), 117–131. https://doi.org/10.3233/AIS-210590",
-        "year":"2021",
+        "citation": "Yaokumah, W., & Wiafe, I. (2020). Analysis of machine learning techniques for anomaly-based intrusion detection. International Journal of Distributed Artificial Intelligence.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Banaseka, F. K., Franklin, H., Katsriku, F. A., Abdulai, J. D., Ekpezu, A., & Wiafe, I. (2021). Soil Medium Electromagnetic Scattering Model for the Study of Wireless Underground Sensor Networks. Wireless Communications and Mobile Computing, 2021, Article ID 8842508. https://doi.org/10.1155/2021/8842508",
-        "year":"2021",
+        "citation": "Wiafe, I., Koranteng, F. N., Wiafe, A., Obeng, E. N., & Yaokumah, W. (2020). The role of norms in information security policy compliance. Information and Computer Security.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Ekpezu, A. O., Wiafe, I., Katsriku, F., & Yaokumah, W. (2021). Using deep learning for acoustic event classification: The case of natural disasters. Journal of the Acoustical Society of America, 149(4), 2926–2935. https://doi.org/10.1121/10.0004775",
-        "year":"2021",
+        "citation": "Koranteng, F. N., Wiafe, I., Katsriku, F. A., & Apau, R. (2020). Understanding trust on social networking sites among tertiary students: An empirical study in Ghana. Applied Computing and Informatics.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Wiafe, I., Koranteng, F. N., Obeng, E. N., Assyne, N., Wiafe, A., & Gulliver, S. R. (2020). Artificial Intelligence for Cybersecurity: A Systematic Mapping of Literature. IEEE Access, 8, 146598–146612. https://doi.org/10.1109/ACCESS.2020.3013145",
-        "year":"2020",
+        "citation": "Wiafe, I., Koranteng, F. N., Obeng, E. N., Assyne, N., Wiafe, A., & Gulliver, S. R. (2020). Artificial intelligence for cybersecurity: A systematic mapping of literature. IEEE Access.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Wiafe, I., Abdulai, J. D., Katsriku, F., Kumi, J. A., Koranteng, F. N., & Boakye-Sekyerehene, P. (2020). Controlling driver over-speeding with a persuasive and intelligent road marking system. Advances in Transportation Studies, 50, 19–30. https://doi.org/10.4399/97888255388183",
-        "year":"2020",
+        "citation": "Wiafe, I., Koranteng, F. N., Owusu, E., Ekpezu, A. O., & Gyamfi, S. A. (2020). Persuasive social features that promote knowledge sharing among tertiary students on social networking sites: An empirical study. Journal of Computer Assisted Learning.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Wiafe, I., Koranteng, F. N., Tettey, T., Katsriku, F. A., & Abdulai, J. D. (2020). Factors that affect acceptance and use of information systems within the Maritime industry in developing countries: The case of Ghana. Journal of Systems and Information Technology, 22(4), 21–45. https://doi.org/10.1108/JSIT-05-2020-0070",
-        "year":"2020",
+        "citation": "Wiafe, I., Abdulai, J. D., Katsriku, F., Kumi, J. A., Koranteng, F. N., & Boakye-Sekyerehene, P. (2020). Controlling driver overspeeding with a persuasive and intelligent road marking system. Advances in Transportation Studies.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2024). Technological factors that influence user compliance with behavior change support systems: A systematic review. Behaviour and Information Technology. (In press).",
-        "year":"2024",
-        "status": "In press"
-      },
-      {
-        "citation": "Ekpezu, A. O., Oinas-Kukkonen, H., & Wiafe, I. (2023). Investigating the determinants of compliance intention in behavior change support systems. International Journal of Human-Computer Interaction. (In press).",
-        "year":"2023",
-        "status": "In press"
-      },
-      {
-        "citation": "Wiafe, I., Atsakpo, E. D., Nutrokpor, C., Ham, J., & Gulliver, S. (2023). Design and evaluation of a persuasive road marking system for controlling speeding behavior. ACM International Conference Proceeding Series, 3, 35–44.",
-        "year":"2023",
+        "citation": "Wiafe, I., Koranteng, F. N., Tettey, T., Kastriku, F. A., & Abdulai, J.-D. (2020). Factors that affect acceptance and use of information systems within the maritime industry in developing countries: The case of Ghana. Journal of Systems and Information Technology.",
+        "year": "2020",
         "status": ""
       },
       {
-        "citation": "Koranteng, F. N., Ham, J., Matzat, U., & Wiafe, I. (2022). Supporting to be credible: Investigating perceived social support as a determinant of perceived credibility. Persuasive Technology.",
-        "year":"2022",
+        "citation": "Koranteng, F. N., Wiafe, I., & Kuada, E. (2019). An empirical study of the relationship between social networking sites and students’ engagement in higher education. Journal of Educational Computing Research.",
+        "year": "2019",
         "status": ""
       },
       {
-        "citation": "Alhammad, M. M., Wiafe, I., & Gulliver, S. R. (2021). Exploring the impact of persuasive features on customer satisfaction levels of e-commerce websites based on the Kano model. Lecture Notes in Computer Science, 12684, 178–192.",
-        "year":"2021",
+        "citation": "Koranteng, F. N., & Wiafe, I. (2019). Factors that promote knowledge sharing on academic social networking sites: An empirical study. Education and Information Technologies.",
+        "year": "2019",
         "status": ""
-      }],
+      },
+      {
+        "citation": "Debrah, E. O., Abdulai, J. D., Wiafe, I., & Katsriku, F. A. (2018). Design and implementation of an integrated web application for the Motor Traffic and Transport Directorate of the Ghana Police Service. Science and Development.",
+        "year": "2018",
+        "status": ""
+      },
+      {
+        "citation": "Afful, E., Adu-Manu, K. S., Yamoah, G. G., Abdulai, J. D., Gyamfi, N. K., Adjei, E., Wiafe, I., & Katsriku, F. A. (2018). Redefining the concept of big data: A Ghanaian perspective. Science and Development.",
+        "year": "2018",
+        "status": ""
+      },
+      {
+        "citation": "Wiafe, I., Nakata, K., & Gulliver, S. (2014). Categorizing users in behavior change support systems based on cognitive dissonance. Personal and Ubiquitous Computing.",
+        "year": "2014",
+        "status": ""
+      },
+      {
+        "citation": "Wiafe, I. (2014). U-FADE: A unified approach to persuasive systems development. International Journal of Conceptual Structures and Smart Applications.",
+        "year": "2014",
+        "status": ""
+      },
+      {
+        "citation": "Gulliver, S., Grzybek, H., Radosavljevic, M., & Wiafe, I. (2013). Changing building user attitude and organizational policy towards sustainable resource use in healthcare. Health Policy and Technology.",
+        "year": "2013",
+        "status": ""
+      },
+      
+    ],
 
         "conferences": [
             {
-                "citation": "Ekpezu, A. O., Wiafe, I., Nutrokpor, C., & Oinas-Kukkonen, H. (2024). Examining continuance intention to exercise in a virtual reality environment. 57th Annual Hawaii International Conference on System Sciences (HICSS), 3527–3536. (In press).",
+                "citation": "Ekpezu, A., Nutrokpor, C., Wiafe, I., & Oinas-Kukkonen, H. (2024). Examining continuance intention to exercise in a virtual reality environment. Proceedings of the 57th Annual Hawaii International Conference on System Sciences.",
                 "year":"2024",
-                "status": "In press"
+                "status": ""
               },
               {
-                "citation": "Koranteng, F. N., Matzat, U., Wiafe, I., & Ham, J. (2023). Credibility in persuasive systems: A systematic review. 18th International Conference on Persuasive Technology, 389–409.",
+                "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2024). Technological factors that influence user compliance with behavior change support systems: A systematic review. Proceedings of the 57th Annual Hawaii International Conference on System Sciences.",
+                "year":"2024",
+                "status": ""
+              },
+
+              {
+                "citation": "Wiafe, I., Doe Atsakpo, E., Nutrokpor, C., Ham, J., & Gulliver, S. (2023). Design and evaluation of a persuasive road marking system for controlling speeding behavior. Proceedings of the International Academic Mindtrek Conference.",
                 "year":"2023",
                 "status": ""
               },
               {
-                "citation": "Ekpezu, A. O., Katsriku, F., Yaokumah, W., & Wiafe, I. (2022). The use of machine learning algorithms in the classification of sound: A systematic review. International Conference on Service Science.",
-                "year":"2022",
+                "citation": "Ekpezu, A. O., Oinas-Kukkonen, H., & Wiafe, I. (2023). Investigating the determinants of compliance intention in behavior change support systems. AMCIS 2023 Proceedings.",
+                "year":"2023",
                 "status": ""
               },
               {
-                "citation": "Nutrokpor, C., Ekpezu, A. O., Wiafe, A., & Wiafe, I. (2021). Exploring the impact of persuasive system features on user sentiments in health and fitness apps. CEUR Workshop Proceedings, 2885, 25–39.",
+                "citation": "Koranteng, F. N., Matzat, U., Wiafe, I., & Ham, J. (2023). Credibility in persuasive systems: A systematic review. Lecture Notes in Computer Science",
                 "year":"2021",
                 "status": ""
               },
               {
-                "citation": "Koranteng, F. N., Ham, J., & Wiafe, I. (2021). Investigating user perceptions of persuasive design elements that influence perceived credibility. 16th International Conference on Persuasive Technology, 164–177.",
-                "year":"2021",
+                "citation": "Koranteng, F. N., Ham, J., Matzat, U., & Wiafe, I. (2022). Supporting to be credible: Investigating perceived social support as a determinant of perceived credibility. Lecture Notes in Computer Science.",
+                "year": "2022",
+                "status": ""
+              },
+              {
+                "citation": "Nutrokpor, C., Ekpezu, A. O., Wiafe, A., & Wiafe, I. (2021). Exploring the impact of persuasive system features on user sentiments in health and fitness apps. CEUR Proceedings.",
+                "year": "2021",
+                "status": ""
+              },
+              {
+                "citation": "Alhammad, M. M., Wiafe, I., & Gulliver, S. R. (2021). Exploring the impact of persuasive features on customer satisfaction levels of E-Commerce Websites Based on the Kano Model. Lecture Notes in Computer Science.",
+                "year": "2021",
+                "status": ""
+              },
+              {
+                "citation": "Koranteng, F. N., Ham, J., & Wiafe, I. (2021). Investigating user perceptions of persuasive design elements that influence perceived credibility. Lecture Notes in Computer Science.",
+                "year": "2021",
+                "status": ""
+              },
+              {
+                "citation": "Assyne, N., & Wiafe, I. (2019). A dynamic software startup competency model. Lecture Notes in Business Information Processing.",
+                "year": "2019",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., Abdulai, J. D., Arkligo, M. A., & Kumi, J. A. (2018). Persuading vehicular drivers to avoid overspeeding using intelligent road markings. CBAS - Science and Development Platform.",
+                "year": "2018",
+                "status": ""
+              },
+              {
+                "citation": "Dabi, J., Wiafe, I., Stibe, A., & Jamal-Deen, A. (2018). Can an enterprise system persuade? The role of perceived effectiveness and social influence. Lecture Notes in Computer Science.",
+                "year": "2018",
+                "status": ""
+              },
+              {
+                "citation": "Kuada, E., Wiafe, I., Addo, D., & Djaba, E. (2017). Privacy-enhancing national identification card system. AFRICON IEEE.",
+                "year": "2017",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., Addo, D., Assyne, N., & Wiafe, A. (2016). Assessing the relationship between user perception and use of ERPs in higher education institutions in Ghana. Applied Informatics and Technology Innovation Conference.",
+                "year": "2016",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., & Frempong, D. A. (2015). Enhancing persuasive features of behaviour change support systems: The role of U-FADE. International Workshop on Behaviour Change Support System.",
+                "year": "2015",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I. (2013). A unified framework for analyzing, designing, and evaluating persuasive technologies. EuroPLOT.",
+                "year": "2013",
+                "status": ""
+              },
+              {
+                "citation": "Alhammad, M., Gulliver, S., Wiafe, I., & Nakata, K. (2013). Culture, cognition, and e-commerce behavior. Proceedings of ICISO 2013.",
+                "year": "2013",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., & Nakata, K. (2013). Bibliographic analysis of persuasive systems: Techniques, methods, and domains of application. CEUR Proceedings.",
+                "year": "2013",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., Alhammad, M. M., Nakata, K., & Gulliver, S. R. (2012). Analyzing the persuasion context of the persuasive systems design model with the 3D-RAB model. Lecture Notes in Computer Science.",
+                "year": "2012",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., Nakata, K., & Gulliver, S. R. (2011). Designing persuasive third-party applications for social networking services based on the 3D-RAB model. Communications in Computer and Information Science.",
+                "year": "2011",
+                "status": ""
+              },
+              {
+                "citation": "Grzybek, H., Shah, H., Wiafe, I., Gulliver, S., & Nakata, K. (2011). Modelling building semantics: Providing feedback and sustainability. Proceedings of World Renewable Energy Congress.",
+                "year": "2011",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., Nakata, K., Moran, S., & Gulliver, S. (2011). Considering user attitude and behavior in persuasive systems design: The 3D-RAB model. Proceedings of ECIS 2011.",
+                "year": "2011",
+                "status": ""
+              },
+              {
+                "citation": "Moran, S., Wiafe, I., & Nakata, K. (2011). Ubiquitous monitoring as a tool for changing cognitive state. IEEE/WIC/ACM.",
+                "year": "2011",
+                "status": ""
+              },
+              {
+                "citation": "Wiafe, I., & Nakata, K. (2010). A semiotic analysis of persuasive technology: An application to obesity management. Proceedings from ICISO 2010.",
+                "year": "2010",
                 "status": ""
               }
+        ],
+        "book_chapters":[
+          {
+            "citation": "Gulliver, S. R., Wiafe, I., Grzybek, H., & Radosavljevic, M. (2014). Healthcare resource sustainability: Obtaining information access via healthcare space modelling. Handbook of Research on Patient Safety and Quality Care through Health Informatics.",
+            "year": "2014",
+            "status": ""
+          },
+          {
+            "citation": "Gulliver, S. R., Wiafe, I., Grzybek, H., & Radosavljevic, M. (2014). Healthcare resource sustainability: Obtaining information access via healthcare space modelling. Handbook of Research on Patient Safety and Quality Care through Health Informatics.",
+            "year": "2014",
+            "status": ""
+          },
+          {
+            "citation": "Wiafe, I. (2018). The role of U-FADE in selecting persuasive system features. Encyclopedia of Information Science and Technology.",
+            "year": "2018",
+            "status": ""
+          },
+          {
+            "citation": "Wiafe, I., Yaokumah, W., & Kissi, F. A. (2020). Students' intentions on cyber ethics issues. Modern Theories and Practices for Cyber Ethics and Security Compliance.",
+            "year": "2020",
+            "status": ""
+          },
+          {
+            "citation": "Yaokumah, W., Rajarajan, M., Abdulai, J., Wiafe, I., & Katsriku, F. A. (2020). Modern Theories and Practices for Cyber Ethics and Security Compliance. IGI Global.",
+            "year": "2020",
+            "status": ""
+          }
         ]
 }
 

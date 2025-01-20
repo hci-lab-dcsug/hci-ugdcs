@@ -16,7 +16,7 @@ const ProjectsPage = () => {
           {currentProjects.map((project, index) => (
             <div className="project-card" key={index}>
               <div className="project-text">
-                <h2 className="project-title" style={{ textDecoration: "underline" }}>
+                <h2 className=" cur-project-title project-title" style={{ textDecoration: "underline" }}>
                   {project.title}
                 </h2>
                 <p className="project-description">{project.description}</p>
@@ -35,7 +35,7 @@ const ProjectsPage = () => {
           {pastProjects.map((project, index) => (
             <div className="project-card" key={index}>
               <div className="project-text">
-                <h2 className="project-title" style={{ textDecoration: "underline" }}>
+                <h2 className="past-project-title project-title" style={{ textDecoration: "underline" }}>
                   {project.title}
                 </h2>
                 <p className="project-description">{project.description}</p>

@@ -35,6 +35,12 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
+  }
+
+  .cur-project-title{
+    color: rgb(69, 114, 1);
+  }
+  .past-project-title{
     color: red;
   }
   
