@@ -48,16 +48,24 @@ const teamData = {
     },
     {
       name: "Elikem Doe Atsapo",
-      title: "Research Assistant, MPhil Student",
+      title: "Research Assistant, PhD Student",
       image: `${process.env.PUBLIC_URL}/elikem.jpeg`,
       expertise:
         "Virtual Reality, Automatic Speech Recognition, Natural Language Processing",
       status: "past",
     },
     {
-      name: "Elikem Doe Atsapo",
+      name: "Charles ",
       title: "Research Assistant, MPhil Student",
-      image: `${process.env.PUBLIC_URL}/elikem.jpeg`,
+      image: `${process.env.PUBLIC_URL}/`,
+      expertise:
+        "Virtual Reality, Automatic Speech Recognition, Natural Language Processing",
+      status: "past",
+    },
+    {
+      name: "Raynard ",
+      title: "Research Assistant, MPhil Student",
+      image: `${process.env.PUBLIC_URL}/`,
       expertise:
         "Virtual Reality, Automatic Speech Recognition, Natural Language Processing",
       status: "past",
