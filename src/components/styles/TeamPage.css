@@ -4,13 +4,12 @@
     margin: auto;
 }
 
-/* Directors Section */
-.director-section {
+/* staffs Section */
+.staffs-section {
     margin-bottom: 80px;
 }
 
-
-.director-card {
+.staffs-card {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -25,28 +24,28 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Uniform image size for directors */
-.director-image {
+/* Uniform image size for staffss */
+.staffs-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Director Info */
-.director-card h3 {
+/* staffs Info */
+.staffs-card h3 {
     font-size: 1.5rem;
     margin: 10px 0;
     color: #021427;
 }
 
-.director-card h4 {
+.staffs-card h4 {
     font-size: 1rem;
     margin: 5px 0;
     color: #555;
 }
 
-.director-card ul {
+.staffs-card ul {
     list-style-type: none;
     padding: 0;
     margin: 10px 0;
@@ -54,12 +53,12 @@
     color: #555;
 }
 
-.director-card ul li {
+.staffs-card ul li {
     font-size: 0.9rem;
     margin-bottom: 5px;
 }
 
-.director-card p {
+.staffs-card p {
     font-size: 0.9rem;
     color: #555;
     margin-top: 10px;
@@ -83,16 +82,23 @@
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 10px;
+    justify-content: center; 
 }
 
 /* Team Cards */
-.team-card {
+.team-grid .team-card {
     text-align: center;
     background: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px; 
+    max-height: 500px;
+}
+
+.member-status{
+    font-size: 1.2rem;
 }
 
 .team-card-image {
