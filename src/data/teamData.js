@@ -1,35 +1,35 @@
 const teamData = {
   staffs: [
-    {name: "Isaac Wiafe",
-    title: "Associate Professor of Information Technology & Lab Director",
-    image: `${process.env.PUBLIC_URL}/prof.jpg`,
-    description: [
-      "- Systems Analysis & Design",
-      "- Large Language Modelling",
-      "- Persuasive Technologies",
-      "- IT for Behaviour Change",
-      "- Extended Reality",
-    ],
-    about:
-      "Professor Isaac Wiafe is a distinguished scholar whose pioneering research focuses on the intersection of technology and human behavior, particularly in the areas of virtual reality and persuasive technologies. He is recognized for his innovative studies on how these technologies, designed to change attitudes or behaviors, can promote healthier lifestyles, enhance learning outcomes, and encourage sustainable practices. By leveraging immersive virtual environments and intelligent systems, he creates engaging experiences that drive meaningful behavioral changes.",
-  },
-  {
-    name: "Jamal-Deen Abdulai",
-    title: "Associate Professor",
-    image: `${process.env.PUBLIC_URL}/prof_jamal.jpg`,
-    description: [
-      "- Wireless Communication Systems",
-      "- AI and Machine Learning",
-      "- Computer Networking",
-      "- Sensor Networks",
-      "- Photonics",
-    ],
-    about:
-      "Professor Jamal-Deen is a distinguished scholar whose pioneering research focuses on the intersection of wireless networks and artificial intelligence, particularly in the areas of virtual reality and persuasive technologies. He is recognized for his innovative studies on how these technologies, designed to change attitudes or behaviors, can promote healthier lifestyles, enhance learning outcomes, and encourage sustainable practices. By leveraging immersive virtual environments and intelligent systems, he creates engaging experiences that drive meaningful behavioral changes.",
-  },
-],
+    {
+      name: "Isaac Wiafe",
+      title: "Associate Professor of Information Technology & Lab Director",
+      image: `${process.env.PUBLIC_URL}/prof.jpg`,
+      description: [
+        "- Systems Analysis & Design",
+        "- Large Language Modelling",
+        "- Persuasive Technologies",
+        "- IT for Behaviour Change",
+        "- Extended Reality",
+      ],
+      about:
+        "Professor Isaac Wiafe is a distinguished scholar whose pioneering research focuses on the intersection of technology and human behavior, particularly in the areas of virtual reality and persuasive technologies. He is recognized for his innovative studies on how these technologies, designed to change attitudes or behaviors, can promote healthier lifestyles, enhance learning outcomes, and encourage sustainable practices. By leveraging immersive virtual environments and intelligent systems, he creates engaging experiences that drive meaningful behavioral changes.",
+    },
+    {
+      name: "Jamal-Deen Abdulai",
+      title: "Associate Professor",
+      image: `${process.env.PUBLIC_URL}/prof_jamal.jpg`,
+      description: [
+        "- Wireless Communication Systems",
+        "- AI and Machine Learning",
+        "- Computer Networking",
+        "- Sensor Networks",
+        "- Photonics",
+      ],
+      about:
+        "Professor Jamal-Deen is a distinguished scholar whose pioneering research focuses on the intersection of wireless networks and artificial intelligence, particularly in the areas of virtual reality and persuasive technologies. He is recognized for his innovative studies on how these technologies, designed to change attitudes or behaviors, can promote healthier lifestyles, enhance learning outcomes, and encourage sustainable practices. By leveraging immersive virtual environments and intelligent systems, he creates engaging experiences that drive meaningful behavioral changes.",
+    },
+  ],
   team: [
-
     {
       name: "Akon Ekpezu",
       title: "Research Assistant, PhD Student",
@@ -55,7 +55,7 @@ const teamData = {
       status: "past",
     },
     {
-      name: "Charles ",
+      name: "Charles Nutrokpor",
       title: "Research Assistant, MPhil Student",
       image: `${process.env.PUBLIC_URL}/`,
       expertise:
@@ -105,7 +105,7 @@ const teamData = {
     {
       name: "Kafui Solaga",
       title: "Teaching/Research Assistant",
-      image: `${process.env.PUBLIC_URL}/payin.jpeg`,
+      image: `${process.env.PUBLIC_URL}/kafui.png`,
       expertise:
         "Automatic Speech Recognition, Virtual Reality, Natural Language Processing, Large Language Models",
       status: "current",
