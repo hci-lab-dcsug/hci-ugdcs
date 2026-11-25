@@ -19,22 +19,39 @@ export default function useReveal() {
       return undefined;
     }
 
-    // Anything already on the first screen is shown at once (its entrance
-    // transition still plays); only content below the fold waits for scroll.
+    // Hide first, then show what is already on screen a frame later, so its
+    // entrance actually plays. A timer backs up the frame callback, which a
+    // hidden tab may never run, so nothing can stay invisible.
     const fold = window.innerHeight;
+    const now = [];
     const later = [];
-    items.forEach((el) => {
-      if (el.getBoundingClientRect().top < fold) el.classList.add("is-in");
-      else later.push(el);
-    });
+    items.forEach((el) => (el.getBoundingClientRect().top < fold ? now : later).push(el));
 
     root.classList.add("motion-ready");
+
+    let shown = false;
+    const showNow = () => {
+      if (shown) return;
+      shown = true;
+      now.forEach((el) => el.classList.add("is-in"));
+    };
+    const raf = requestAnimationFrame(() => requestAnimationFrame(showNow));
+    const timer = setTimeout(showNow, 120);
+
+    // A photo revealed by clip-path has no visible area until it is shown, so
+    // the observer would never see it: watch its parent instead.
+    const watched = new Map();
+    later.forEach((el) => {
+      const target = el.dataset.reveal === "scale" && el.parentElement ? el.parentElement : el;
+      if (!watched.has(target)) watched.set(target, []);
+      watched.get(target).push(el);
+    });
 
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-in");
+            (watched.get(entry.target) || []).forEach((el) => el.classList.add("is-in"));
             io.unobserve(entry.target);
           }
         });
@@ -42,7 +59,12 @@ export default function useReveal() {
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
     );
 
-    later.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    watched.forEach((_, target) => io.observe(target));
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
+      showNow();
+      io.disconnect();
+    };
   }, [pathname]);
 }

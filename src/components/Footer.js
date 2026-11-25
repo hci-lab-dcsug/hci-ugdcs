@@ -5,9 +5,9 @@ import "./styles/Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="strip footer__strip" aria-hidden="true">
+      <div className="strip footer__strip" aria-hidden="true" data-reveal="strip">
         {Array.from({ length: 16 }, (_, i) => (
-          <i key={i} />
+          <i key={i} style={{ "--i": i }} />
         ))}
       </div>
       <div className="footer__top">

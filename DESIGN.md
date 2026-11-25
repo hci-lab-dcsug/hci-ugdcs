@@ -137,7 +137,7 @@ Flat cloth. Depth comes from dye (field colour) and ink, never from shadows.
 - **Primary button**: navy, white text, square corners; darker navy on hover; `scale(0.97)` on press.
 - **Language picker**: language names as tabs (arrow keys move between them), panel of that language's projects.
 
-Motion: on load the first-screen squares are pressed in like stamps (scale 1.06 to 1 with opacity, 520ms, 70ms stagger); a figure re-presses under the pointer (scale 0.96) and on tap (0.94). Reduced motion keeps a plain fade. All other motion as before: entrances rise and fade, hover only on fine pointers, durations from `--dur`.
+Motion: the cloth is made in front of the visitor, once. On load the stitched strip is sewn block by block (scaleX, 420ms, 45ms stagger), the comb lines are ruled between the squares (scale from their start edge, 800ms, `--ease-in-out`), each figure is stamped (arrives at scale 1.4 and blurred 6px, pressed sharp in 480ms `--ease-out`) and the photo is uncovered (clip-path from the top, 1000ms). On scroll, section heads rule their comb line (900ms), text rises 24px in reading order (75ms stagger), and photos are uncovered with a slight settle (clip-path 900ms, image scale 1.08 to 1). Page-head counts are stamped on arrival; pages fade in (220ms) on navigation. A figure re-presses under the pointer (0.96) and on tap (0.94). Durations over 300ms are only for these one-time entrances; anything a visitor triggers stays at `--dur` (200ms) or less. Reduced motion keeps fades only. Hover only on fine pointers. A clipped element has no area for IntersectionObserver, so `useReveal` watches a clipped photo's parent.
 
 ## Do's and Don'ts
 

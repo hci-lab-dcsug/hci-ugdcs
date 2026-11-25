@@ -29,6 +29,16 @@ function PageEffects() {
   return null;
 }
 
+/* Keyed by path, so each page fades in instead of snapping into place. */
+function RouteFade({ children }) {
+  const { pathname } = useLocation();
+  return (
+    <div key={pathname} className="route">
+      {children}
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router basename="/hci-ugdcs">
@@ -44,7 +54,8 @@ function App() {
       </a>
       <Navbar />
       <main id="main">
-        <Routes>
+        <RouteFade>
+          <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -53,7 +64,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/software" element={<Navigate to="/projects" replace />} />
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+          </Routes>
+        </RouteFade>
       </main>
       <Footer />
     </Router>

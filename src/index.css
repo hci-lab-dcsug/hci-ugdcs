@@ -46,6 +46,7 @@
   --nav-h: 76px;
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1); /* on-screen drawing: rules, strips, reveals */
   --dur: 200ms;
 
   --z-nav: 20;
@@ -203,13 +204,27 @@ main {
   flex: none;
 }
 
-/* Section heads sit on a comb-ruled line. */
+/* Section heads sit on a comb-ruled line, drawn as a pseudo-element so it can be ruled in. */
 .comb-head {
   padding-bottom: 28px;
+}
+
+.comb-head,
+.ruled {
+  position: relative;
+}
+
+.comb-head::after,
+.ruled::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 13px;
   background-image: var(--comb);
-  background-size: 100% 13px;
-  background-position: left bottom;
-  background-repeat: no-repeat;
+  transform-origin: left center;
+  pointer-events: none;
 }
 
 /* The stitched strip that joins cloth panels. */
@@ -381,8 +396,12 @@ main {
 }
 
 /* ------------------------------------------------------------------
-   Entrances: parts of a section rise in reading order, once
+   Motion: the cloth is made in front of you, once.
+   Text rises, rules are drawn, strips are sewn, photos are uncovered,
+   figures are stamped. Every piece plays once and only on the way in.
    ------------------------------------------------------------------ */
+
+/* Text: rise in reading order */
 .motion-ready [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
@@ -390,13 +409,100 @@ main {
   transition-delay: calc(var(--i, 0) * 75ms);
 }
 
-.motion-ready [data-reveal="scale"] {
-  transform: scale(1.03);
-}
-
 .motion-ready [data-reveal].is-in {
   opacity: 1;
   transform: none;
+}
+
+/* Rules: a comb line drawn left to right under a head. The head itself does not move. */
+.motion-ready [data-reveal="rule"] {
+  opacity: 1;
+  transform: none;
+}
+
+.motion-ready .ruled::after,
+.motion-ready .comb-head::after {
+  transform: scaleX(0);
+  transition: transform 900ms var(--ease-in-out) 120ms;
+}
+
+.motion-ready .ruled.is-in::after,
+.motion-ready .comb-head.is-in::after {
+  transform: none;
+}
+
+/* Photos: uncovered from the top like cloth lifted off a print */
+.motion-ready [data-reveal="scale"] {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 900ms var(--ease-in-out);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.motion-ready [data-reveal="scale"] img {
+  transform: scale(1.08);
+  transition: transform 1200ms var(--ease-out);
+  transition-delay: inherit;
+}
+
+.motion-ready [data-reveal="scale"].is-in {
+  clip-path: inset(0 0 0 0);
+}
+
+.motion-ready [data-reveal="scale"].is-in img {
+  transform: none;
+}
+
+/* Strips: each coloured block is sewn on, left to right */
+.motion-ready [data-reveal="strip"] {
+  opacity: 1;
+  transform: none;
+}
+
+.motion-ready [data-reveal="strip"] i {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 420ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 45ms);
+}
+
+.motion-ready [data-reveal="strip"].is-in i {
+  transform: none;
+}
+
+/* Stamps: a figure arrives oversized and soft, and is pressed sharp */
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(1.4);
+    filter: blur(6px);
+  }
+  55% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+/* "backwards" fill: hidden before it starts, then hands back to normal styles so hover still works. */
+.page-head[data-stamp]::after {
+  transform-origin: 70% 80%;
+  animation: stamp 480ms var(--ease-out) 260ms backwards;
+}
+
+/* Between pages: the new page fades in instead of snapping */
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.route {
+  animation: page-in 220ms var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -409,6 +515,27 @@ main {
   .motion-ready [data-reveal="scale"] {
     transform: none;
     transition: opacity 300ms ease;
+  }
+
+  .motion-ready [data-reveal="scale"] {
+    opacity: 0;
+    clip-path: none;
+  }
+
+  .motion-ready [data-reveal="scale"].is-in {
+    opacity: 1;
+  }
+
+  .motion-ready [data-reveal="scale"] img,
+  .motion-ready [data-reveal="strip"] i,
+  .motion-ready .ruled::after,
+  .motion-ready .comb-head::after {
+    transform: none;
+    transition: none;
+  }
+
+  .page-head[data-stamp]::after {
+    animation: page-in 300ms ease backwards;
   }
 
   .btn:active,
