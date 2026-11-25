@@ -1,6 +1,36 @@
 const publicationsData = {
 
 "journals": [
+      {
+        "citation": "Koranteng, F. N., Ham, J., Matzat, U., & Wiafe, I. (2026). Evaluating the impact of personality-color congruence on user perceptions of likability, credibility, and behavioral trust toward persuasive systems. International Journal of Human-Computer Interaction.",
+        "year": "2026",
+        "status": ""
+      },
+      {
+        "citation": "Assyne, N., Nyadroh, A., Adabor, E., Antwi-Boasiako, E., & Wiafe, I. (2026). A dynamic software start-up competence model. Information and Software Technology.",
+        "year": "2026",
+        "status": ""
+      },
+      {
+        "citation": "Ekpezu, A. O., Wiafe, I., Atsakpo, E. D., & Oinas-Kukkonen, H. (2025). From apps to virtual reality: The transferability of compliance drivers from non-virtual reality to virtual reality persuasive systems. International Journal of Human-Computer Interaction.",
+        "year": "2025",
+        "status": ""
+      },
+      {
+        "citation": "Ekpezu, A. O., Wiafe, I., Atsakpo, E. D., & Oinas-Kukkonen, H. (2025). Designing to promote compliance: The role of prompt types in a persuasive virtual reality environment. Behaviour & Information Technology.",
+        "year": "2025",
+        "status": ""
+      },
+      {
+        "citation": "Koranteng, F. N., Matzat, U., Wiafe, I., & Ham, J. (2025). The impact of social support strategies on users' credibility perceptions and continuous use intentions of academic social networking sites: An empirical study. International Journal of Human-Computer Interaction.",
+        "year": "2025",
+        "status": ""
+      },
+      {
+        "citation": "Wiafe, I., Abdulai, J.-D., Ekpezu, A. O., Helegah, R. D., Atsakpo, E. D., Nutrokpor, C., Winful, F. B. P., & Solaga, K. K. (2025). Advancing automatic speech recognition for low-resource Ghanaian languages: Audio datasets for Akan, Ewe, Dagbani, Dagaare, and Ikposo. Data in Brief, 61, 111880.",
+        "year": "2025",
+        "status": ""
+      },
     {
         "citation": "Wiafe, I., Ekpezu, A. O., Gyamera, G. O., Winful, F. B. P., Atsakpo, E. D., Nutrokpor, C., & Gulliver, S. R. (2025). Comparative evaluation of learning technologies using a randomized controlled trial: Virtual reality, augmented reality, online video platforms, and traditional classroom learning. Education and Information Technologies.",
         "year":"2025",
@@ -150,6 +180,21 @@ const publicationsData = {
     ],
 
         "conferences": [
+      {
+        "citation": "Salihs, S. A., Wiafe, I., Abdulai, J.-D., Atsakpo, E. D., Ayoka, G., Cave, R., Ekpezu, A. O., et al. (2025). A cookbook for community-driven data collection of impaired speech in low-resource languages. Proceedings of Interspeech 2025.",
+        "year": "2025",
+        "status": ""
+      },
+      {
+        "citation": "Wiafe, I., Ekpezu, A. O., Helegah, R. D., Winful, F. B. P., Atsakpo, E. D., Nutrokpor, C., & Solaga, K. K. (2025). Building an Ewe language dataset: Towards enhancing automatic speech recognition technologies for low resource languages. Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP-2025), 328-338.",
+        "year": "2025",
+        "status": ""
+      },
+      {
+        "citation": "Mensah, M. A., Wiafe, I., Ekpezu, A., Appati, J. K., Abdulai, J.-D., Wiafe-Akenten, A. N., Yeboah, F. E., & Odame, G. (2025). Benchmarking Akan ASR models across domain-specific datasets: A comparative evaluation of performance, scalability, and adaptability. Future Technologies Conference (FTC 2025), Lecture Notes in Networks and Systems.",
+        "year": "2025",
+        "status": ""
+      },
             {
                 "citation": "Ekpezu, A., Nutrokpor, C., Wiafe, I., & Oinas-Kukkonen, H. (2024). Examining continuance intention to exercise in a virtual reality environment. Proceedings of the 57th Annual Hawaii International Conference on System Sciences.",
                 "year":"2024",
@@ -272,7 +317,29 @@ const publicationsData = {
                 "status": ""
               }
         ],
+        "preprints": [
+      {
+        "citation": "Wiafe, I., Ekpezu, A. O., Salihs, S. A., Atsakpo, E. D., Winful, F. B. P., Abdulai, J.-D., et al. (2026). Enabling automatic disordered speech recognition: An impaired speech dataset in the Akan language. arXiv:2602.05406.",
+        "year": "2026",
+        "status": ""
+      },
+        ],
         "book_chapters":[
+      {
+        "citation": "Ekpezu, A. O., Wiafe, I., & Oinas-Kukkonen, H. (2026). The perceived persuasiveness of generative artificial intelligence systems in learning task. Communications in Computer and Information Science.",
+        "year": "2026",
+        "status": ""
+      },
+      {
+        "citation": "Koranteng, F. N., Matzat, U., Ham, J., & Wiafe, I. (2026). What is beautiful is credible: Examining personality-color congruence, and its effects on users' perceptions of attractiveness, likeability, and credibility of persuasive systems. Communications in Computer and Information Science.",
+        "year": "2026",
+        "status": ""
+      },
+      {
+        "citation": "Nutrokpor, C., Wiafe, I., Atsakpo, E. D., Wiafe, A., & Ekpezu, A. (2025). The use of artificial reality in road safety: A systematic review. Smart Innovation, Systems and Technologies.",
+        "year": "2025",
+        "status": ""
+      },
           {
             "citation": "Gulliver, S. R., Wiafe, I., Grzybek, H., & Radosavljevic, M. (2014). Healthcare resource sustainability: Obtaining information access via healthcare space modelling. Handbook of Research on Patient Safety and Quality Care through Health Informatics.",
             "year": "2014",

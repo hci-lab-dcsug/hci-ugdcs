@@ -1,39 +1,33 @@
 const researchFocus = [
   {
-    image: `${process.env.PUBLIC_URL}/pervasive.png`,
-    title: "Persuasive Technologies",
+    title: "Persuasive technologies",
     description:
-      "Exploring technologies seamlessly integrated into everyday environments to enhance human-computer interaction.",
+      "Software designed to help people change a habit, from exercise to study, and research into which design features make that work.",
   },
   {
-    image: `${process.env.PUBLIC_URL}/llms.png`,
-    title: "Large Language Models",
+    title: "Large language models",
     description:
-      "Advancing natural language processing with state-of-the-art models for understanding and generating human-like text.",
+      "Language models that understand and write Ghanaian languages, and the data needed to train them.",
   },
   {
-    image: `${process.env.PUBLIC_URL}/asr.png`,
-    title: "Speech Recognition",
+    title: "Speech recognition",
     description:
-      "Innovating voice processing systems to enable accurate and natural interactions with spoken language.",
+      "Speech recognition and synthesis for Akan, Ewe, Ga, Dagbani and Dagaare, including the speech of people with impairments.",
   },
   {
-    image: `${process.env.PUBLIC_URL}/science.png`,
-    title: "AI for Health",
+    title: "AI for health",
     description:
-      "Harnessing artificial intelligence to improve healthcare outcomes, diagnostics, and patient care systems.",
+      "Tools that bring health guidance to people in their own language, such as maternal care for Akan-speaking mothers.",
   },
   {
-    image: `${process.env.PUBLIC_URL}/ar.png`,
-    title: "Augmented Reality",
+    title: "Augmented reality",
     description:
-      "Developing immersive solutions that blend digital elements with the real world to enhance user experiences.",
+      "Digital information laid over the physical world, studied as a teaching tool alongside video and classroom learning.",
   },
   {
-    image: `${process.env.PUBLIC_URL}/vr.jpg`,
-    title: "Virtual Reality",
+    title: "Virtual reality",
     description:
-      "Creating fully immersive environments for simulation, training, and interactive learning experiences.",
+      "Immersive environments for learning and training, and how their design affects students’ satisfaction.",
   },
 ];
 

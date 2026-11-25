@@ -1,129 +1,154 @@
 import React, { useMemo } from "react";
-import "../styles/PublicationsPage.css";
+import { useSearchParams } from "react-router-dom";
+import Motif from "../Motif";
 import publicationsData from "../../data/publicationsData";
+import "../styles/Pages.css";
 
-const PublicationsPage = () => {
-  const { journals, conferences, book_chapters } = publicationsData;
+const HIGHLIGHT = "Wiafe, I.";
+const MIN_YEAR = 2010;
 
-  // Function to highlight specified author names
-  const highlightAuthors = (citation) => {
-    const authorsToHighlight = ["Wiafe, I."];
-    let highlightedCitation = citation;
+const TYPES = [
+  { id: "all", label: "All" },
+  { id: "journal", label: "Journals" },
+  { id: "conference", label: "Conferences" },
+  { id: "book", label: "Books & chapters" },
+  { id: "preprint", label: "Preprints" },
+];
 
-    authorsToHighlight.forEach((author) => {
-      const authorRegex = new RegExp(author.replace(".", "\\."), "g");
-      highlightedCitation = highlightedCitation.replace(
-        authorRegex,
-        `<strong>${author}</strong>`
-      );
-    });
+const TYPE_NAME = {
+  journal: "Journal article",
+  conference: "Conference paper",
+  book: "Book or chapter",
+  preprint: "Preprint",
+};
 
-    return highlightedCitation;
+const ALL = [
+  ...publicationsData.journals.map((p) => ({ ...p, type: "journal" })),
+  ...publicationsData.conferences.map((p) => ({ ...p, type: "conference" })),
+  ...publicationsData.book_chapters.map((p) => ({ ...p, type: "book" })),
+  ...(publicationsData.preprints || []).map((p) => ({ ...p, type: "preprint" })),
+]
+  .map((p) => ({ ...p, yearNum: parseInt(String(p.year).trim(), 10) }))
+  .filter((p) => p.yearNum >= MIN_YEAR);
+
+function Citation({ text }) {
+  const parts = text.split(HIGHLIGHT);
+  return (
+    <>
+      {parts.map((part, i) => (
+        <React.Fragment key={i}>
+          {i > 0 && <strong>{HIGHLIGHT}</strong>}
+          {part}
+        </React.Fragment>
+      ))}
+    </>
+  );
+}
+
+function PublicationsPage() {
+  const [params, setParams] = useSearchParams();
+  const type = TYPES.some((t) => t.id === params.get("type")) ? params.get("type") : "all";
+  const query = params.get("q") || "";
+  const update = (next) => {
+    const merged = { type, q: query, ...next };
+    const out = {};
+    if (merged.type && merged.type !== "all") out.type = merged.type;
+    if (merged.q) out.q = merged.q;
+    setParams(out, { replace: true });
   };
+  const setType = (t) => update({ type: t });
+  const setQuery = (q) => update({ q });
 
-  // Filter and group journals by year, starting from 2010
-  const journalsByYear = useMemo(() => {
-    const filteredJournals = journals.filter((journal) => {
-      const publicationYear = new Date(journal.year).getFullYear();
-      return publicationYear >= 2010;
+  const counts = useMemo(() => {
+    const c = { all: ALL.length };
+    ALL.forEach((p) => (c[p.type] = (c[p.type] || 0) + 1));
+    return c;
+  }, []);
+
+  const byYear = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const list = ALL.filter(
+      (p) => (type === "all" || p.type === type) && (!q || p.citation.toLowerCase().includes(q))
+    );
+    const groups = {};
+    list.forEach((p) => {
+      (groups[p.yearNum] = groups[p.yearNum] || []).push(p);
     });
+    return Object.keys(groups)
+      .sort((a, b) => b - a)
+      .map((y) => ({ year: y, items: groups[y] }));
+  }, [type, query]);
 
-    return filteredJournals.reduce((acc, journal) => {
-      const publicationYear = new Date(journal.year).getFullYear();
-      if (!acc[publicationYear]) {
-        acc[publicationYear] = [];
-      }
-      acc[publicationYear].push({
-        ...journal,
-        highlightedCitation: highlightAuthors(journal.citation),
-      });
-      return acc;
-    }, {});
-  }, [journals]);
-
-  // Filter and group conferences by year, starting from 2010
-  const conferencesByYear = useMemo(() => {
-    const filteredConferences = conferences.filter((conf) => {
-      const publicationYear = new Date(conf.year).getFullYear();
-      return publicationYear >= 2010;
-    });
-
-    return filteredConferences.reduce((acc, conf) => {
-      const publicationYear = new Date(conf.year).getFullYear();
-      if (!acc[publicationYear]) {
-        acc[publicationYear] = [];
-      }
-      acc[publicationYear].push({
-        ...conf,
-        highlightedCitation: highlightAuthors(conf.citation),
-      });
-      return acc;
-    }, {});
-  }, [conferences]);
+  const shown = byYear.reduce((n, g) => n + g.items.length, 0);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Publications</h1>
+    <>
+      <header className="page-head" data-stamp="Ɔ">
+        <h1 data-reveal>Publications</h1>
+        <Motif />
+        <p className="lead" data-reveal style={{ "--i": 1 }}>
+          {ALL.length} papers, chapters and books since {MIN_YEAR}, on persuasive design, speech and language technology,
+          and learning.
+        </p>
+      </header>
 
-      <section>
-        <h2>Journals</h2>
-        {Object.keys(journalsByYear)
-          .sort((a, b) => b - a) // Sort years in descending order
-          .map((year) => (
-            <div key={year}>
-              <h3>{year}</h3>
-              <ul>
-                {journalsByYear[year].map((journal, index) => (
-                  <li key={index}>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: journal.highlightedCitation,
-                      }}
-                    />
+      <section className="pubs wrap" aria-label="Publication list">
+        <div className="pubs__tools">
+          <label className="pubs__search">
+            <span className="visually-hidden">Search publications</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by author, title or journal"
+              autoComplete="off"
+            />
+          </label>
+          <div className="pubs__types" role="group" aria-label="Type of publication">
+            {TYPES.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                className="chip"
+                aria-pressed={type === t.id}
+                onClick={() => setType(t.id)}
+              >
+                {t.label} <span className="chip__n">{counts[t.id] || 0}</span>
+              </button>
+            ))}
+          </div>
+          <p className="pubs__status" aria-live="polite">
+            Showing {shown} of {ALL.length}
+          </p>
+        </div>
+
+        {byYear.length === 0 ? (
+          <div className="pubs__empty">
+            <p className="lead">Nothing matches “{query}”.</p>
+            <button type="button" className="btn btn--ink" onClick={() => update({ q: "", type: "all" })}>
+              Clear the search
+            </button>
+          </div>
+        ) : (
+          byYear.map((g) => (
+            <div className="pubs__year" key={g.year}>
+              <h2 className="pubs__y">{g.year}</h2>
+              <ol className="pubs__list">
+                {g.items.map((p, i) => (
+                  <li key={`${p.type}-${i}`} className="pub">
+                    <p className="pub__cite">
+                      <Citation text={p.citation} />
+                    </p>
+                    <p className="pub__type">{TYPE_NAME[p.type]}</p>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </div>
-          ))}
+          ))
+        )}
       </section>
-
-      <section>
-        <h2>Books</h2>
-        <ul>
-          {book_chapters.map((book, index) => (
-            <li key={index}>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: highlightAuthors(book.citation),
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2>Conferences</h2>
-        {Object.keys(conferencesByYear)
-          .sort((a, b) => b - a) // Sort years in descending order
-          .map((year) => (
-            <div key={year}>
-              <h3>{year}</h3>
-              <ul>
-                {conferencesByYear[year].map((conf, index) => (
-                  <li key={index}>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: conf.highlightedCitation,
-                      }}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-      </section>
-    </div>
+    </>
   );
-};
+}
 
 export default PublicationsPage;

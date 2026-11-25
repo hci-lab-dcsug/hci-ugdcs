@@ -1,99 +1,106 @@
 import React from "react";
-import "../styles/ContactPage.css";
+import Motif from "../Motif";
+import "../styles/Pages.css";
+
+const MAP_URL =
+  "https://www.google.com/maps/search/?api=1&query=Department+of+Computer+Science+University+of+Ghana+Legon";
 
 function ContactPage() {
   return (
-    <div className="contact-page">
-
-      {/* Join Us Section */}
-      <div className="join-us-page">
-        <h1>Join Us at the HCI & Persuasive Technologies Lab</h1>
-
-        <section className="admission-info">
-          <h2>Admission Requirement</h2>
-          <p>
-            To become a member of the HCI & Persuasive Technologies Laboratory,
-            you must first gain admission to the <strong>University of Ghana</strong>. We collaborate with motivated
-            students and researchers who share our passion for innovation and
-            inclusivity.
-          </p>
-        </section>
-
-        <section className="research-interests">
-          <h2>Our Research Interests</h2>
-          <p>
-            Our lab focuses on cutting-edge research in Human-Computer
-            Interaction, Pervasive Technologies, Large Language Models, Speech
-            Recognition, and Artificial Intelligence for Health. We aim to drive
-            technological advancements that address real-world challenges.
-          </p>
-        </section>
-
-        <section className="future-goals">
-          <h2>Our Future Goals</h2>
-          <p>
-            We are committed to leveraging AI and emerging technologies to empower
-            marginalized communities, promoting accessibility, inclusivity, and
-            sustainable development across the globe.
-          </p>
-        </section>
-
-        <section className="contact-director left-align">
-          <h2>Want to Know More?</h2>
-          <p>
-            If you are interested in joining us or learning more, feel free to{" "} 
-            <a href="mailto:iwiafe@ug.edu.gh" className="contact-link">
-              contact Prof. Wiafe
-            </a>
-            .
-          </p>
-        </section>
-      </div>
-      
-      {/* Contact Section */}
-      <div className="contact-header">
-        <h1>Contact</h1>
-        <p>
-          Our facilities are located at the Department of Computer Science Building, in the main campus of University of Ghana.
+    <>
+      <header className="page-head" data-stamp="Ɛ">
+        <h1 data-reveal>Join the lab</h1>
+        <Motif />
+        <p className="lead" data-reveal style={{ "--i": 1 }}>
+          We take on students and researchers admitted to the University of Ghana. Here is how to get in touch.
         </p>
-        <p>Our full address is:</p>
-        <address>
-          Dept of Computer Science Building
-          <br />
-          University of Ghana
-          <br />
-          Room CS6, Accra
-        </address>
-        <div className="contact-buttons">
-          <a
-            href="mailto:hcidcsug@gmail.com"
-            className="contact-button email-button"
-          >
-            <i className="fas fa-envelope"></i> iwiafe@ug.edu.gh
-          </a>
-          <a
-            href="https://goo.gl/maps/imperial"
-            className="contact-button address-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fas fa-map-marker-alt"></i> Address
+      </header>
+
+      <section className="join wrap" aria-label="How to join">
+        <div className="join__step" data-reveal>
+          <Motif className="join__o" />
+          <h2>Get into the University of Ghana</h2>
+          <p>
+            Lab members are students or staff of the University of Ghana, so admission comes first: to an MSc, MPhil
+            or PhD programme in Computer Science, or a related department.
+          </p>
+        </div>
+        <div className="join__step" data-reveal style={{ "--i": 1 }}>
+          <Motif className="join__o" />
+          <h2>Pick the work you want to do</h2>
+          <p>
+            Our projects cover human–computer interaction, persuasive technology, large language models, speech
+            recognition and AI for health, mostly in Ghanaian languages.
+          </p>
+        </div>
+        <div className="join__step" data-reveal style={{ "--i": 2 }}>
+          <Motif className="join__o" />
+          <h2>Write to Prof. Wiafe</h2>
+          <p>
+            Say who you are, your programme, and which project interests you. The lab also wants to use technology to
+            widen access for communities that software has left out.
+          </p>
+          <a className="btn" href="mailto:iwiafe@ug.edu.gh?subject=Joining%20the%20HCI%20Lab">
+            Email Prof. Wiafe <span className="arrow" aria-hidden="true">→</span>
           </a>
         </div>
-      </div>
+      </section>
 
-      {/* Image Section */}
-      <div className="contact-image">
-        <div className="contact-image-card">
+      <section className="partner wrap" id="partner" aria-labelledby="partner-h">
+        <h2 id="partner-h" data-reveal>
+          Partner with the lab
+        </h2>
+        <p className="lead" data-reveal style={{ "--i": 1 }}>
+          Funders, companies and organisations work with us on speech data, Ghanaian-language tools, hackathons and
+          research. Write to Prof. Wiafe with what you have in mind.
+        </p>
+        <a
+          className="btn btn--navy"
+          href="mailto:iwiafe@ug.edu.gh?subject=Partnership%20with%20the%20HCI%20Lab"
+          data-reveal
+          style={{ "--i": 2 }}
+        >
+          Email about a partnership <span className="arrow" aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <section className="visit" aria-labelledby="visit-h">
+        <figure className="visit__photo" data-reveal="scale">
           <img
             src={`${process.env.PUBLIC_URL}/Dept.jpg`}
-            alt="University of Ghana, Main Campus"
-            className="contact-image"
+            alt="Entrance of the Department of Computer Science building, University of Ghana"
+            width="1360"
+            height="765"
+            loading="lazy"
           />
-          <p className="contact-image-caption">University of Ghana Campus</p>
+        </figure>
+        <div className="visit__text">
+          <h2 id="visit-h" data-reveal>
+            Find us at Legon
+          </h2>
+          <address data-reveal style={{ "--i": 1 }}>
+            Room CS6
+            <br />
+            Department of Computer Science Building
+            <br />
+            University of Ghana, Legon, Accra
+          </address>
+          <ul className="visit__links" data-reveal style={{ "--i": 2 }}>
+            <li>
+              <a className="text-link" href={MAP_URL} target="_blank" rel="noopener noreferrer">
+                Open in Google Maps
+              </a>
+            </li>
+            <li>
+              Lab email: <a className="text-link" href="mailto:hcidcsug@gmail.com">hcidcsug@gmail.com</a>
+            </li>
+            <li>
+              Director: <a className="text-link" href="mailto:iwiafe@ug.edu.gh">iwiafe@ug.edu.gh</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 

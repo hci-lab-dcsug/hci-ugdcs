@@ -1,61 +1,62 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import '../styles/Navbar.css'
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import "../styles/Navbar.css";
+
+const LINKS = [
+  { to: "/projects", label: "Projects" },
+  { to: "/team", label: "Team" },
+  { to: "/publications", label: "Publications" },
+  { to: "/events-info", label: "Events" },
+];
 
 function Navbar() {
-  const location = useLocation();
-  const isHomepage = location.pathname === "/";
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => setOpen(false), [pathname]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
-    <nav
-      className={
-        isHomepage ? "navbar homepage-navbar" : "navbar non-home-navbar"
-      }
-    >
-      {!isHomepage && (
-        <div className="navbar-branding">
-          <Link to="/" className="logo-link">
-            <img src={`${process.env.PUBLIC_URL}/hci.png`} alt="Lab Logo" className="navbar-logo" />
-            <p className="lab-name">HCI & Persuasive Technologies Laboratory</p>
-          </Link>
-          <div className="ug">
-            <h2 className="university">University of Ghana</h2>
-          </div>
-        </div>
-      )}
-      {isHomepage && (
-        <div className="logo-container">
-          <Link to="/" className="logo-link">
-            <img src={`${process.env.PUBLIC_URL}/hci.png`} alt="HCI Lab Logo" className="navbar-logo" />
-            <p className="lab-name">HCI & Persuasive Technologies Lab</p>
-          </Link>
-        </div>
-      )}
-      <ul className="navbar-links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/team">Team</Link>
-        </li>
-        <li>
-          <Link to="/publications">Publications</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/events-info"> Events</Link>
-        </li>
-        <li>
-          <Link to="/software">Software</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
+    <header className={`nav${open ? " nav--open" : ""}`}>
+      <Link to="/" className="nav__mark" aria-label="Human-Computer Interaction Lab, University of Ghana: home">
+        <img className="nav__crest" src={`${process.env.PUBLIC_URL}/hci-lab-crest.png`} alt="" width="34" height="38" />
+        <span className="nav__name">
+          <span className="nav__lab">Human-Computer Interaction Lab</span>
+          <span className="nav__uni">University of Ghana · Dept. of Computer Science</span>
+        </span>
+      </Link>
 
-      </ul>
-    </nav>
+      <button
+        type="button"
+        className="nav__toggle"
+        aria-expanded={open}
+        aria-controls="site-menu"
+        onClick={() => setOpen((v) => !v)}
+      >
+        {open ? "Close" : "Menu"}
+      </button>
+
+      <nav id="site-menu" className="nav__menu" aria-label="Main">
+        <ul className="nav__links">
+          {LINKS.map((l) => (
+            <li key={l.to}>
+              <NavLink to={l.to} className="nav__link">
+                {l.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <Link to="/contact" className="btn nav__action">
+          Join the lab
+        </Link>
+      </nav>
+    </header>
   );
 }
 
