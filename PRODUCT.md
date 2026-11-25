@@ -25,7 +25,7 @@ A University of Ghana lab building speech and language technology for Ghanaian l
 
 ## Operating Context
 
-- Lab room: CS6, Department of Computer Science Building, University of Ghana, Legon, Accra.
+- Lab: Human-Computer Interaction Lab, Department of Computer Science Building, University of Ghana, Legon, Accra.
 - Director: Prof. Isaac Wiafe (iwiafe@ug.edu.gh). Lab email: hcidcsug@gmail.com.
 - Joining requires admission to the University of Ghana first.
 - Related site: tekyeremapahackathon.com (the hackathon, same lab brand).

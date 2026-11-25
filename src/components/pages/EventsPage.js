@@ -117,7 +117,7 @@ function Event({ ev, i }) {
 function EventsPage() {
   return (
     <>
-      <header className="page-head" data-stamp="Ɖ">
+      <header className="page-head" data-stamp={eventsData.length}>
         <h1 data-reveal>Events and news</h1>
         <Motif />
         <p className="lead" data-reveal style={{ "--i": 1 }}>

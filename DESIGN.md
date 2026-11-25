@@ -1,6 +1,6 @@
 ---
 name: Human-Computer Interaction Lab, University of Ghana
-description: The stamped alphabet. A stamped cotton cloth where the letters the lab teaches computers (Ɛ Ɔ Ŋ Ɖ) are pressed in ink inside comb-ruled squares.
+description: The stamped cloth. A stamped cotton cloth where the lab's real figures (hours of speech recorded, publications, hackathon turnout) are pressed in ink inside comb-ruled squares.
 colors:
   cotton: "#f3ede1"
   cotton-deep: "#ebe3d3"
@@ -87,7 +87,9 @@ components:
 
 ## Overview
 
-**North Star: the stamped alphabet.** The site is a piece of stamped cotton cloth. It borrows the *method* of Adinkra cloth (carved stamps pressed in ink inside comb-ruled squares, coloured strips stitched between panels) and applies it to the letters the lab teaches computers to read and speak: Ɛ, Ɔ, Ŋ, Ɖ. It uses letters, never Adinkra symbols, so no sacred or proverbial symbol is used as decoration.
+**North Star: the stamped cloth.** The site is a piece of stamped cotton cloth. It borrows the *method* of Adinkra cloth (carved stamps pressed in ink inside comb-ruled squares, coloured strips stitched between panels) and applies it to the lab's real figures: 5,000 hours of speech, 50 hours of impaired speech, 70 publications. It stamps numbers, never Adinkra symbols, so no sacred or proverbial symbol is used as decoration.
+
+Earlier versions stamped single letters (Ɛ Ɔ Ŋ Ɖ); they were dropped because visitors could not tell what they meant. Every stamp must say something a visitor can read.
 
 The UG crest stays as the lab's mark (menu bar, footer logo). Its navy and gold are the cloth's dyes and thread.
 
@@ -104,16 +106,16 @@ This replaces the earlier navy-and-waveform direction, which echoed the Tɛkyer�
 ## Typography
 
 - **Montserrat** (700/800): headings, names, counts. It is the lettering of the lab's logo.
-- **Andika** (400/700, SIL): text, controls and every stamped letter. SIL designed it for literacy in African languages; it carries Ɛ ɛ Ɔ ɔ Ŋ ŋ Ɖ ɖ natively (checked in the browser), with the African "n-form" capital Ŋ.
+- **Andika** (400/700, SIL): text and controls. SIL designed it for literacy in African languages; it carries Ɛ ɛ Ɔ ɔ Ŋ ŋ Ɖ ɖ natively (checked in the browser), with the African "n-form" capital Ŋ.
 - Andika has no medium weight: 400 or 700 only.
-- Stamped letters use the SVG `#ink-edge` filter (fractal-noise displacement, scale 4) so their edge reads as pressed ink. The filter is defined once in `App.js`.
+- Stamped figures use the SVG `#ink-edge` filter (fractal-noise displacement, scale 4) so their edge reads as pressed ink. The filter is defined once in `App.js`.
 - Retired: Fraunces, Outfit (AI-default faces).
 
 ## Layout
 
 - **The comb module**: content sits in squares separated by comb-ruled lines, four parallel 1.5px ink strokes 13px wide (`--comb`, `--comb-y`), on each square's right and bottom edges, never on the outer edge of a grid.
-- Home first screen: a stitched strip, then a 4 × 2 grid of squares (headline across two; stamped Ɛ, Ɔ; stamped Ŋ, a stamped publication count, a lab photo, stamped Ɖ). On tablets and phones, two columns, headline across both.
-- "Inside room CS6": text beside a 3 × 2 directory of squares (Projects, Languages, People, Publications, Events, Join), each with a stamped count.
+- Home first screen: a stitched strip, then a 4 × 2 grid of squares (headline across two; 5,000 hours of speech, 50 hours of impaired speech; 7 languages, 70 publications, a lab photo, 550 hackathon participants). On tablets and phones, two columns, headline across both.
+- "Inside the lab": text beside a 3 × 2 directory of squares (Projects, Languages, People, Publications, Events, Join), each with a stamped count.
 - Section heads sit on a comb-ruled line (`.comb-head` or the same background on the heading).
 - One page margin; sections separated by `spacing.section`.
 
@@ -125,22 +127,22 @@ Flat cloth. Depth comes from dye (field colour) and ink, never from shadows.
 
 - Square: 2px radius on buttons and photos. Photos inside squares carry a 2px ink border.
 - The **stitched strip**: equal blocks of navy, gold, ink and kobene, 18px tall, under the menu bar and above the footer. The small `.gold-bar` mark is the same strip in miniature.
-- Stamped letters are the only large graphic forms.
+- Stamped figures are the only large graphic forms.
 
 ## Components
 
-- **Letter square** (home): a stamped letter, its pair (Ɛ ɛ) and the languages that use it. The whole square links to the language picker set to that language (`/?lang=Ewe#languages`).
-- **Count square**: a Montserrat numeral treated as a stamp, linking to its section.
-- **Page head**: navy cloth, white Montserrat title, small stitched mark, and one large gold stamped letter set from `data-stamp` (Team Ŋ, Projects Ɛ, Publications Ɔ, Events Ɖ, Join Ɛ).
-- **Project card without a photo**: navy cloth with its languages in gold and a gold stamp of its main language's letter (Akan Ɔ, Ewe Ɖ, Ga/Dagbani Ŋ).
+- **Figure square** (home): a Montserrat numeral treated as a stamp, a short label ("hours of speech") and one plain sentence of detail. The whole square links to the source (the dataset, the section, the event).
+- **Page head**: navy cloth, white Montserrat title, small stitched mark, and the page's count as a large gold stamp from `data-stamp` (Team 11, Projects 6, Publications 70, Events 4). Join has none.
+- **Project card without a photo**: navy cloth with its languages large in gold.
 - **Primary button**: navy, white text, square corners; darker navy on hover; `scale(0.97)` on press.
 - **Language picker**: language names as tabs (arrow keys move between them), panel of that language's projects.
 
-Motion: on load the first-screen squares are pressed in like stamps (scale 1.06 to 1 with opacity, 520ms, 70ms stagger); a letter re-presses under the pointer (scale 0.96) and on tap (0.94). Reduced motion keeps a plain fade. All other motion as before: entrances rise and fade, hover only on fine pointers, durations from `--dur`.
+Motion: on load the first-screen squares are pressed in like stamps (scale 1.06 to 1 with opacity, 520ms, 70ms stagger); a figure re-presses under the pointer (scale 0.96) and on tap (0.94). Reduced motion keeps a plain fade. All other motion as before: entrances rise and fade, hover only on fine pointers, durations from `--dur`.
 
 ## Do's and Don'ts
 
-- **Do** stamp only letters of Ghanaian orthographies, captioned with the languages that use them. Ask a linguist in the lab before adding a letter.
+- **Do** stamp only real, sourced figures, with a label that says what they count.
+- **Do** write plainly: say what the lab did, with numbers and names. No slogans.
 - **Do** let a dye own a whole section.
 - **Do** keep every square a working link where it can be one.
 - **Don't** use Adinkra symbols as decoration.

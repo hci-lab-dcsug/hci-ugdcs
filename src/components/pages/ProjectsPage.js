@@ -51,7 +51,7 @@ function ProjectsPage() {
 
   return (
     <>
-      <header className="page-head" data-stamp="Ɛ">
+      <header className="page-head" data-stamp={projectsData.length}>
         <h1 data-reveal>Research projects</h1>
         <Motif />
         <p className="lead" data-reveal style={{ "--i": 1 }}>

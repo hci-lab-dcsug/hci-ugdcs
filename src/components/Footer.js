@@ -56,7 +56,7 @@ function Footer() {
           <address className="footer__col">
             <h2 className="footer__h">Find us</h2>
             <p>
-              Room CS6, Department of Computer Science
+              Human-Computer Interaction Lab, Department of Computer Science
               <br />
               University of Ghana, Legon, Accra
             </p>

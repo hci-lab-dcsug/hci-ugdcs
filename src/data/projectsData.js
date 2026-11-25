@@ -1,7 +1,7 @@
 const img = (file) => `${process.env.PUBLIC_URL}/${file}`;
 
 /*
-  image: the project's picture, or null to show the lab's Ɔ plate instead.
+  image: the project's picture, or null to show the lab's logo plate instead.
   imageCredit: set when the picture is a credited open-licence photo, not the lab's own.
   languages: the Ghanaian / West African languages the project works in
   (drives the language picker on the home page).

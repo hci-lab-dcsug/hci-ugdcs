@@ -48,32 +48,73 @@ function Directory() {
   );
 }
 
-/* The letters ordinary software cannot handle, and the languages that use them. */
-const LETTERS = [
-  { ch: "Ɛ", pair: "Ɛ ɛ", langs: "Akan · Ewe · Ga · Dagbani", lang: "Akan", tone: "" },
-  { ch: "Ɔ", pair: "Ɔ ɔ", langs: "as in Ɔbaa Panin", lang: "Akan", tone: "stamp--red" },
-  { ch: "Ŋ", pair: "Ŋ ŋ", langs: "Ewe · Ga · Dagbani", lang: "Ga", tone: "stamp--navy" },
-  { ch: "Ɖ", pair: "Ɖ ɖ", langs: "Ewe", lang: "Ewe", tone: "" },
+const SPEECH_DATA_URL = "https://hci-lab-ugspeechdata.github.io/speech_data_ghana_ug";
+const IMPAIRED_DATA_URL = "https://data.mendeley.com/datasets/vc84vdw8tb";
+
+/* The first screen's squares: real figures from the lab's work, each pressed like a stamp and each a link. */
+const FACTS = [
+  {
+    href: SPEECH_DATA_URL,
+    num: "5,000",
+    label: "hours of speech",
+    detail: "Recorded in Akan, Ewe, Dagbani, Dagaare and Ikposo. Open data, 2025.",
+    tone: "",
+    long: true,
+  },
+  {
+    href: IMPAIRED_DATA_URL,
+    num: "50",
+    label: "hours of impaired speech",
+    detail: "Akan speakers who stammer, or have cerebral palsy, cleft palate or a stroke.",
+    tone: "stamp--red",
+  },
+  {
+    to: "/?lang=Akan#languages",
+    num: LANGUAGES.length,
+    label: "languages",
+    detail: "Ghanaian and West African languages in our projects.",
+    tone: "stamp--navy",
+  },
+  {
+    to: "/publications",
+    num: PUB_COUNT,
+    label: "publications",
+    detail: "Papers, chapters and preprints since 2010.",
+    tone: "stamp--navy",
+  },
+  {
+    to: "/events-info#tekyerema-pa-2026",
+    num: "550",
+    label: "hackathon participants",
+    detail: "131 teams at Tɛkyerɛma Pa 2026, building inclusive tools in Ghanaian languages.",
+    tone: "",
+  },
 ];
 
-/* One distinctive letter per language, for stamping project cards. */
-const LETTER_FOR = { Akan: "Ɔ", Ewe: "Ɖ", Ga: "Ŋ", Dagbani: "Ŋ" };
+function Fact({ f, i }) {
+  const body = (
+    <>
+      <span className={`stamp cloth__num ${f.long ? "cloth__num--long" : ""} ${f.tone}`}>{f.num}</span>
+      <span className="cloth__cap">
+        <b>{f.label}</b>
+        <span>{f.detail}</span>
+      </span>
+    </>
+  );
+  return f.href ? (
+    <a href={f.href} className="sq cloth__count" style={{ "--i": i }} target="_blank" rel="noopener noreferrer">
+      {body}
+    </a>
+  ) : (
+    <Link to={f.to} className="sq cloth__count" style={{ "--i": i }}>
+      {body}
+    </Link>
+  );
+}
 
 /* First viewport: the stamped cloth. */
 function StampedCloth() {
-  const [a, b, c, d] = LETTERS;
-  const Letter = ({ l, i }) => (
-    <Link to={`/?lang=${l.lang}#languages`} className="sq cloth__letter" style={{ "--i": i }}>
-      <span className={`stamp cloth__stamp ${l.tone}`} aria-hidden="true">
-        {l.ch}
-      </span>
-      <span className="cloth__cap">
-        <b>{l.pair}</b>
-        <span>{l.langs}</span>
-      </span>
-      <span className="visually-hidden">The letter {l.pair}: see projects in {l.lang}</span>
-    </Link>
-  );
+  const [hours, impaired, langs, pubs, hacks] = FACTS;
   return (
     <section className="cloth" aria-labelledby="cloth-h">
       <div className="strip" aria-hidden="true">
@@ -85,11 +126,11 @@ function StampedCloth() {
         <div className="sq cloth__head" style={{ "--i": 0 }}>
           <div>
             <h1 id="cloth-h">
-              We teach computers <em>Ghana’s languages</em>
+              Language technology for <em>Ghana</em>
             </h1>
             <p className="cloth__sub">
-              Speech, language and behaviour-change technology from room CS6, Department of Computer Science,
-              University of Ghana.
+              We record open speech data in Ghanaian languages, build speech recognition and language models, and
+              study how software can help people change behaviour. Department of Computer Science, University of Ghana.
             </p>
           </div>
           <div className="cloth__actions">
@@ -101,20 +142,14 @@ function StampedCloth() {
             </Link>
           </div>
         </div>
-        <Letter l={a} i={1} />
-        <Letter l={b} i={2} />
-        <Letter l={c} i={3} />
-        <Link to="/publications" className="sq cloth__count" style={{ "--i": 4 }}>
-          <span className="stamp cloth__num stamp--navy">{PUB_COUNT}</span>
-          <span className="cloth__cap">
-            <b>Publications</b>
-            <span>2010 – 2026</span>
-          </span>
-        </Link>
+        <Fact f={hours} i={1} />
+        <Fact f={impaired} i={2} />
+        <Fact f={langs} i={3} />
+        <Fact f={pubs} i={4} />
         <figure className="sq cloth__photo" style={{ "--i": 5 }}>
           <img src={pub("lab.jpg")} alt="Members of the lab with collaborators in Accra" width="1600" height="1204" />
         </figure>
-        <Letter l={d} i={6} />
+        <Fact f={hacks} i={6} />
       </div>
     </section>
   );
@@ -214,26 +249,49 @@ function HomePage() {
     <>
       <StampedCloth />
 
-      {/* Inside room CS6: who we are, and the directory into the site */}
+      {/* Inside the lab: who we are, and the directory into the site */}
       <section className="door">
         <div className="door__left">
           <h2 className="door__h" data-reveal>
-            Inside room CS6
+            Inside the lab
           </h2>
           <p className="door__sub" data-reveal style={{ "--i": 1 }}>
             The Human-Computer Interaction Lab builds speech, language and behaviour-change technology at the
-            Department of Computer Science, University of Ghana, Legon. Every square is a way in.
+            Department of Computer Science, University of Ghana, Legon.
           </p>
         </div>
         <Directory />
       </section>
 
-      {/* Statement with inline pictures */}
-      <section className="statement wrap" aria-label="What the lab does">
-        <p data-reveal>
-          Our open dataset helped bring Akan voice search to Google. Now we build for mothers, people who stammer
-          and classrooms.
-        </p>
+      {/* Open data: the lab's two public speech datasets */}
+      <section className="statement wrap" aria-labelledby="data-h">
+        <h2 id="data-h" data-reveal>
+          Open speech data
+        </h2>
+        <div className="statement__cols">
+          <div data-reveal>
+            <h3>UGSpeechData</h3>
+            <p>
+              About 5,000 hours of speech in Akan, Ewe, Dagbani, Dagaare and Ikposo: 1,000 hours per language,
+              recorded by native speakers describing culturally familiar pictures, with transcriptions for part of
+              each. Published in <i>Data in Brief</i> in 2025 and free for research.
+            </p>
+            <a className="text-link" href={SPEECH_DATA_URL} target="_blank" rel="noopener noreferrer">
+              Get the dataset
+            </a>
+          </div>
+          <div data-reveal style={{ "--i": 1 }}>
+            <h3>UGAkan Impaired Speech</h3>
+            <p>
+              About 50 hours of transcribed Akan speech from people who stammer or who have cerebral palsy, cleft
+              palate or a stroke-related speech disorder. It is for speech recognition that understands them, and was
+              collected with funding from Google Research.
+            </p>
+            <a className="text-link" href={IMPAIRED_DATA_URL} target="_blank" rel="noopener noreferrer">
+              Get the dataset
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Projects: staggered tiles */}
@@ -259,12 +317,7 @@ function HomePage() {
                 <img src={p.image} alt="" loading="lazy" width="800" height="600" />
               </div>
             ) : (
-              <>
                 <p className="tile__langs">{p.languages.length ? p.languages.join(" · ") : p.area}</p>
-                <span className="stamp stamp--gold tile__stamp" aria-hidden="true">
-                  {LETTER_FOR[p.languages[0]] || "Ɛ"}
-                </span>
-              </>
             )}
             <div className="tile__cap">
               <span className="tile__name">{p.shortTitle}</span>
@@ -295,8 +348,9 @@ function HomePage() {
               Led by Prof. Isaac Wiafe
             </h2>
             <p data-reveal style={{ "--i": 1 }}>
-              Professor of Information Technology. His research looks at how technology changes behaviour:
-              persuasive systems, virtual reality and language models that help people live, learn and stay healthy.
+              Professor of Information Technology. His research covers persuasive technology and behaviour change,
+              and speech and language technology for Ghanaian languages. In his inaugural lecture in July 2026 he
+              argued that AI in Ghana should start from people’s needs and from local data.
             </p>
             <div className="about__actions" data-reveal style={{ "--i": 2 }}>
               <a href="mailto:iwiafe@ug.edu.gh" className="btn">

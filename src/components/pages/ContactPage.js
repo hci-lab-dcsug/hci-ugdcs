@@ -8,7 +8,7 @@ const MAP_URL =
 function ContactPage() {
   return (
     <>
-      <header className="page-head" data-stamp="Ɛ">
+      <header className="page-head">
         <h1 data-reveal>Join the lab</h1>
         <Motif />
         <p className="lead" data-reveal style={{ "--i": 1 }}>
@@ -79,7 +79,7 @@ function ContactPage() {
             Find us at Legon
           </h2>
           <address data-reveal style={{ "--i": 1 }}>
-            Room CS6
+            Human-Computer Interaction Lab
             <br />
             Department of Computer Science Building
             <br />

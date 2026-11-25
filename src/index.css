@@ -339,14 +339,15 @@ main {
   padding: clamp(64px, 9vw, 140px) var(--margin) clamp(56px, 7vw, 104px);
 }
 
-/* Each page head carries one stamped letter, pressed in gold ink. */
+/* Each page head carries its count (people, projects, papers, events), pressed in gold ink. */
 .page-head[data-stamp]::after {
   content: attr(data-stamp);
   position: absolute;
   right: var(--margin);
   bottom: -0.12em;
-  font-family: "Andika", var(--font);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
   font-size: clamp(9rem, 22vw, 20rem);
   line-height: 0.8;
   color: var(--gold);

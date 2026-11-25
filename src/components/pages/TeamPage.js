@@ -32,7 +32,7 @@ function TeamPage() {
 
   return (
     <>
-      <header className="page-head" data-stamp="Ŋ">
+      <header className="page-head" data-stamp={staffs.length + current.length}>
         <h1 data-reveal>The people in the lab</h1>
         <Motif />
         <p className="lead" data-reveal style={{ "--i": 1 }}>

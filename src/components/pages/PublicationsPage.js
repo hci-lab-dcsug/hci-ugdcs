@@ -83,7 +83,7 @@ function PublicationsPage() {
 
   return (
     <>
-      <header className="page-head" data-stamp="Ɔ">
+      <header className="page-head" data-stamp={ALL.length}>
         <h1 data-reveal>Publications</h1>
         <Motif />
         <p className="lead" data-reveal style={{ "--i": 1 }}>
